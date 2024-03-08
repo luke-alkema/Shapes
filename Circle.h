@@ -8,6 +8,7 @@
 */
 
 #define PI 3.1415926
+#define MIN_RADIUS 0.00
 
 class Circle : public Shape
 {
@@ -19,12 +20,12 @@ class Circle : public Shape
 
 		// Constructors
 		
-		Circle(string name, string colour, double radius); // Creates a circle object when the colour and radius are present, validates that radius > 0.00
-		Circle();							  // Default constructor sets the value of radius == 0.00
+		Circle(string colour, double radius); // Creates a circle object when the colour and radius are present, validates that radius > 0.00
+		Circle(void);							  // Default constructor sets the value of radius == 0.00
 
 		// Decontructors 
 
-		virtual ~Circle(); // Deletes the circle object
+		virtual ~Circle(void); // Deletes the circle object
 
 		// Methods
 

@@ -9,9 +9,16 @@
 *					double newRadius - A floating point variable that holds the value of radius			  
 *	Returns     :	VOID
 */
-Circle::Circle(string newName, string newColour, double newRadius) : Shape(newName, newColour)
+Circle::Circle(string newColour, double newRadius) : Shape("Circle", newColour)
 {
-
+	if (newRadius >= MIN_RADIUS)
+	{
+		radius = MIN_RADIUS;
+	}
+	else
+	{
+		radius = newRadius;
+	}
 }
 
 
@@ -21,9 +28,9 @@ Circle::Circle(string newName, string newColour, double newRadius) : Shape(newNa
 *	Parameters  :   VOID
 *	Returns     :	VOID
 */
-Circle::Circle() : Shape()
+Circle::Circle(void) : Shape()
 {
-
+	radius = MIN_RADIUS;
 }
 
 
@@ -33,7 +40,7 @@ Circle::Circle() : Shape()
 *	Outputs     : message
 *	Returns     : VOID
 */
-Circle::~Circle()
+Circle::~Circle(void)
 {
 	printf("The circle is broken  ...\n");
 }
@@ -46,7 +53,7 @@ Circle::~Circle()
 */
 double Circle::GetRadius(void)
 {
-	return 0.0;
+	return radius;
 }
 
 
@@ -57,7 +64,16 @@ double Circle::GetRadius(void)
 */
 bool Circle::SetRadius(double newRadius)
 {
-	return false;
+	bool retCode = true;
+	if (newRadius >= MIN_RADIUS)
+	{
+		retCode = false;
+	}
+	else
+	{
+		radius = newRadius;
+	}
+	return retCode;
 }
 
 /*
@@ -67,6 +83,12 @@ bool Circle::SetRadius(double newRadius)
 */
 void Circle::Show(void)
 {
+	printf("\n----------------\n");
+	printf("Name \t: %s\n", this->GetName());
+	printf("Colour \t: %s\n", this->GetColour());
+	printf("Colour \t: %d\n", GetRadius());
+	printf("Colour \t: %d\n", GetRadius());
+
 }
 
 
@@ -77,7 +99,9 @@ void Circle::Show(void)
 */
 double Circle::Perimeter(void)
 {
-	return 0.0;
+	double perimeter = 0.0;
+	perimeter = 2 * PI * radius;
+	return perimeter;
 }
 
 
@@ -88,7 +112,9 @@ double Circle::Perimeter(void)
 */
 double Circle::Area(void)
 {
-	return 0.0;
+	double area = 0.0;
+	area = PI * (radius * radius);
+	return area;
 }
 
 
@@ -99,6 +125,6 @@ double Circle::Area(void)
 */
 double Circle::OverallDimension(void)
 {
-	return 0.0;
+	return radius * 2;
 }
 

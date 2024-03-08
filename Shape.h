@@ -26,7 +26,7 @@ public:
 	/* ---------- METHOD PROTOTYPES --------- */
 
 	Shape(string name, string colour);  // Constructor: The given name must be circle, square, or unknown and less than 50 characters, or else name set to unknown.
-	Shape();		// The default constructor will make the name Unknown, and the colour undefined. 
+	Shape(void);		// The default constructor will make the name Unknown, and the colour undefined. 
 
 	string GetColour(void); // returns copy of the data member colour
 	
