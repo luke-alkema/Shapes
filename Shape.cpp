@@ -1,6 +1,23 @@
 #include "Shape.h"
 
 
+Shape::Shape(string newName, string newColour)
+{
+	int length = newName.length();
+	if (length >= NAME_SIZE || length == 0)
+	{
+		name = "Unknown";
+	}
+	else if (newName == "Circle")
+	{
+		name = "Circle";
+	}
+	else if (newName == "Square")
+	{
+		name = "Square";
+	}
+
+}
 
 
 Shape::Shape()
@@ -19,7 +36,7 @@ string Shape::GetColour(void)
 // returns copy of the data member name
 string Shape::GetName(void)
 {
-
+	return name;
 }
 
 // validates then changes the data member newColour
@@ -40,8 +57,22 @@ bool Shape::ChangeColour(string newColour)
 }
 
 // validates then changes the data member name
-bool Shape::ChangeName(string name) 
+bool Shape::ChangeName(string newName) 
 {
-
+	bool retCode = true;
+	int length = newName.length();
+	if (length >= NAME_SIZE || length == 0)
+	{
+		retCode = false;
+	}
+	else if (newName == "Circle")
+	{
+		name = "Circle";
+	}
+	else if (newName == "Square")
+	{
+		name = "Square";
+	}
+	return retCode;
 }
 

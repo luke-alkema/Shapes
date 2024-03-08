@@ -1,8 +1,9 @@
 #pragma once
 #include <stdio.h>
 #include <string>
-
 #define MAX_COLOUR_LENGTH 10
+#define NAME_SIZE 51
+
 using namespace std;
 
 
