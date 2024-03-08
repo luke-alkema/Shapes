@@ -19,7 +19,7 @@ class Circle : public Shape
 
 		// Constructors
 		
-		Circle(string colour, double radius); // Creates a circle object when the colour and radius are present, validates that radius > 0.00
+		Circle(string name, string colour, double radius); // Creates a circle object when the colour and radius are present, validates that radius > 0.00
 		Circle();							  // Default constructor sets the value of radius == 0.00
 
 		// Decontructors 
