@@ -42,5 +42,10 @@ public:
 	virtual double Area(void) = 0;		//calculates area
 	virtual double OverallDimension(void) = 0;    //calculates overalldimension
 
+	/*-------------Function Prototype----------*/
+	
+
 };
+
+
 
