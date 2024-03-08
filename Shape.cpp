@@ -3,7 +3,7 @@
 
 Shape::Shape(string newName, string newColour)
 {
-	int length = newName.length();
+	int length = newName.size();
 	if (length >= NAME_SIZE || length == 0)
 	{
 		name = "Unknown";
@@ -23,11 +23,11 @@ Shape::Shape(string newName, string newColour)
 	}
 	else if (newColour.length() >= MAX_COLOUR_LENGTH || newColour.length() == 0)
 	{
-		name = "undefined";
+		colour = "undefined";
 	}
 	else // Maybe change above else if to else, perhaps?
 	{
-		name = "undefined";
+		colour = "undefined";
 	}
 }
 
@@ -87,4 +87,6 @@ bool Shape::ChangeName(string newName)
 	}
 	return retCode;
 }
+
+
 

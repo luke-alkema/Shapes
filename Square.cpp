@@ -19,7 +19,7 @@ Square::Square(string newColour, double newSideLength) : Shape("Square", newColo
 
 Square::~Square()
 {
-	printf("\n\nThe square is squished ...\n");
+	printf("\nThe square is squished ...\n");
 }
 
 double Square::GetSideLength(void)
@@ -39,14 +39,14 @@ bool Square::ChangeSideLength(double newSideLength)
 
 void Square::Show(void)
 {
-	printf("\n----------------\n");
-	printf("Shape Information\n");
-	printf("Name \t: %s\n", GetName().c_str());
-	printf("Colour \t: %s\n", GetColour().c_str());
-	printf("Side-Length \t: %f cm\n", sideLength);
-	printf("Perimeter \t: %f cm\n", Perimeter());
-	printf("Area \t: %f square cm\n", Area());
-	printf("\n----------------\n");
+	printf("\n-----------------------------------\n");
+	printf("Shape Information:\n");
+	printf("Name \t\t: %s\n", GetName().c_str());
+	printf("Colour \t\t: %s\n", GetColour().c_str());
+	printf("Side-Length \t: %5.2f cm\n", sideLength);
+	printf("Perimeter \t: %5.2f cm\n", Perimeter());
+	printf("Area \t\t: %5.2f square cm\n", Area());
+	printf("------------------------------------\n");
 }
 
 double Square::Perimeter(void)

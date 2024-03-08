@@ -22,4 +22,6 @@ public:
 	virtual double Perimeter(void);
 	virtual double Area(void);
 	virtual double OverallDimension(void);
+
+	
 };
