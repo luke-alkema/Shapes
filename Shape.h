@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <string>
 
+#define NAME_SIZE 51
+
 using namespace std;
 
 

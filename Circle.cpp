@@ -9,7 +9,7 @@
 *					double newRadius - A floating point variable that holds the value of radius			  
 *	Returns     :	VOID
 */
-Circle::Circle(string newColour, double newRadius) : Shape("Circle", newColour)
+Circle::Circle(string newName, string newColour, double newRadius) : Shape(newName, newColour)
 {
 
 }
