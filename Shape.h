@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string>
 
+#define MAX_COLOUR_LENGTH 10
 using namespace std;
 
 
@@ -30,9 +31,9 @@ public:
 	
 	string GetName(void); // returns copy of the data member name
 
-	bool ChangeColour(string colour);  // validates then changes the data member colour
+	bool ChangeColour(string newColour);  // validates then changes the data member colour
 
-	bool ChangeName(string name); // validates then changes the data member name
+	bool ChangeName(string newName); // validates then changes the data member name
 
 	/* ---------- PURE VIRTUAL FUNCTION PROTOTYPES --------- */
 
