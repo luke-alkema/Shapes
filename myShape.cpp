@@ -1,4 +1,5 @@
 //test harness
+
 #include "Circle.h"
 #include "Square.h"
 
@@ -29,6 +30,30 @@ int main(void)
 	mySquare->Show();
 
 	delete mySquare;
+  
+  
+  char radiusBuffer[MAX_USER_INPUT] = "";
+	printf("\n --- Creating Circle Shape --- \n");
+	printf("Input Circle's radius: ");
+	fgets(radiusBuffer, MAX_USER_INPUT, stdin);
+	radiusBuffer[strcspn(radiusBuffer, "\n")] = 0;
+
+	char colourBuffer[MAX_USER_INPUT] = "";
+	printf("Input Circle's colour: ");
+	fgets(colourBuffer, MAX_USER_INPUT, stdin);
+	colourBuffer[strcspn(colourBuffer, "\n")] = 0;
+	printf("\n");
+
+	Circle* newCircle = new Circle(colourBuffer, atof(radiusBuffer));
+  if (mySquare == NULL)
+	{
+		printf("Not enought memory\n");
+		return ERROR;
+	}
+  
+  newCircle->Show();
+  
+	delete newCircle;
 
 	return 0;
 }

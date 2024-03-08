@@ -16,6 +16,10 @@ Shape::Shape(string newName, string newColour)
 	{
 		name = "Square";
 	}
+	else
+	{
+		name = "Unknown";
+	}
 
 	if (newColour == "red" || newColour == "blue" || newColour == "yellow" || newColour == "purple" || newColour == "pink" || newColour == "orange" || newColour == "undefined")
 	{

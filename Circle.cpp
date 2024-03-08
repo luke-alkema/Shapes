@@ -11,7 +11,7 @@
 */
 Circle::Circle(string newColour, double newRadius) : Shape("Circle", newColour)
 {
-	if (newRadius >= MIN_RADIUS)
+	if (newRadius <= MIN_RADIUS)
 	{
 		radius = MIN_RADIUS;
 	}
@@ -65,7 +65,7 @@ double Circle::GetRadius(void)
 bool Circle::SetRadius(double newRadius)
 {
 	bool retCode = true;
-	if (newRadius >= MIN_RADIUS)
+	if (newRadius <= MIN_RADIUS)
 	{
 		retCode = false;
 	}
@@ -83,12 +83,14 @@ bool Circle::SetRadius(double newRadius)
 */
 void Circle::Show(void)
 {
-	printf("\n----------------\n");
-	printf("Name \t: %s\n", this->GetName());
-	printf("Colour \t: %s\n", this->GetColour());
-	printf("Colour \t: %d\n", GetRadius());
-	printf("Colour \t: %d\n", GetRadius());
-
+	printf("\n---------------------------------------\n");
+	printf("Shape Information: \n");
+	printf("Name  \t\t: %s\n", GetName().c_str());
+	printf("Colour \t\t: %s\n", GetColour().c_str());
+	printf("Radius \t\t:%5.2f\n", GetRadius());
+	printf("Circumfrence  \t: %5.2f\n", Perimeter());
+	printf("Area  \t\t: %5.2f\n", Area());
+	printf("---------------------------------------\n");
 }
 
 
