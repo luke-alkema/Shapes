@@ -17,6 +17,18 @@ Shape::Shape(string newName, string newColour)
 		name = "Square";
 	}
 
+	if (newColour == "red" || newColour == "blue" || newColour == "yellow" || newColour == "purple" || newColour == "pink" || newColour == "orange" || newColour == "undefined")
+	{
+		colour = newColour;
+	}
+	else if (newColour.length() >= MAX_COLOUR_LENGTH || newColour.length() == 0)
+	{
+		name = "undefined";
+	}
+	else // Maybe change above else if to else, perhaps?
+	{
+		name = "undefined";
+	}
 }
 
 
