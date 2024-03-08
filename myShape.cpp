@@ -17,7 +17,7 @@ int main(void)
 	colourBuffer[strcspn(colourBuffer, "\n")] = 0;
 
 	char sideLengthBuffer[MAX_USER_INPUT] = "";
-	printf("Enter Squares Side Length >>");
+	printf("Enter Squares Side Length >> ");
 	fgets(sideLengthBuffer, MAX_USER_INPUT, stdin);
 	double sideLength = atof(sideLengthBuffer);
 
@@ -29,31 +29,32 @@ int main(void)
 	}
 	mySquare->Show();
 
-	delete mySquare;
+	
   
   
   char radiusBuffer[MAX_USER_INPUT] = "";
-	printf("\n --- Creating Circle Shape --- \n");
-	printf("Input Circle's radius: ");
-	fgets(radiusBuffer, MAX_USER_INPUT, stdin);
-	radiusBuffer[strcspn(radiusBuffer, "\n")] = 0;
+	printf("\n----Creating Circle Shape----\n");
 
-	char colourBuffer[MAX_USER_INPUT] = "";
-	printf("Input Circle's colour: ");
+	printf("Input Circle's colour >> ");
 	fgets(colourBuffer, MAX_USER_INPUT, stdin);
 	colourBuffer[strcspn(colourBuffer, "\n")] = 0;
-	printf("\n");
 
-	Circle* newCircle = new Circle(colourBuffer, atof(radiusBuffer));
-  if (mySquare == NULL)
+	printf("Input Circle's radius >> ");
+	fgets(radiusBuffer, MAX_USER_INPUT, stdin);
+	radiusBuffer[strcspn(radiusBuffer, "\n")] = 0;
+	
+
+	Circle* myCircle = new Circle(colourBuffer, atof(radiusBuffer));
+  if (myCircle == NULL)
 	{
-		printf("Not enought memory\n");
+		printf("Not enough memory\n");
 		return ERROR;
 	}
   
-  newCircle->Show();
+  myCircle->Show();
   
-	delete newCircle;
+	delete myCircle;
+	delete mySquare;
 
 	return 0;
 }

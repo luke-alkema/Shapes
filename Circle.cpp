@@ -83,14 +83,14 @@ bool Circle::SetRadius(double newRadius)
 */
 void Circle::Show(void)
 {
-	printf("\n---------------------------------------\n");
+	printf("\n------------------------------------\n");
 	printf("Shape Information: \n");
 	printf("Name  \t\t: %s\n", GetName().c_str());
 	printf("Colour \t\t: %s\n", GetColour().c_str());
-	printf("Radius \t\t:%5.2f\n", GetRadius());
+	printf("Radius \t\t: %5.2f\n", GetRadius());
 	printf("Circumfrence  \t: %5.2f\n", Perimeter());
 	printf("Area  \t\t: %5.2f\n", Area());
-	printf("---------------------------------------\n");
+	printf("------------------------------------\n");
 }
 
 
