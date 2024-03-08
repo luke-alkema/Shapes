@@ -3,7 +3,7 @@
 
 Shape::Shape(string newName, string newColour)
 {
-	int length = newName.length();
+	int length = newName.size();
 	if (length >= NAME_SIZE || length == 0)
 	{
 		name = "Unknown";
@@ -91,4 +91,6 @@ bool Shape::ChangeName(string newName)
 	}
 	return retCode;
 }
+
+
 
