@@ -1,41 +1,47 @@
 #pragma once
 #include "Shape.h"
-/*
-*	Class   : Circle
-*	Purpose : The purpose of this class is to further model the shape of a circle, it is a sub-class that stems from the master-class "Shape".
-*			  The master-class defines the name and colour of the shape while circle has a radius, a defining factor of a circle which allows to obtain
-*			  Values of the circle that might be useful to us such as the circumfrence, perimeter etc.
-*/
+
+// Const Definitions
 
 #define PI 3.1415926
 #define MIN_RADIUS 0.00
 
+/// \class Circle
+/// 
+/// \brief The purpose of the Circle class is to extend from the Shape class and further model a Circle
+/// 
+/// <summary> This class adds onto the Shape class by adding the data-member radius as well as the PI constant allowing an actual shape to be made from the inheritance relatioship between these 2 classes. 
+///			  Circle class adds multiple functions that make use of Pi and the circles radius to perform calculations which can be displayed to the user.
+/// </summary>
+/// 
+/// \author <i>Dylan Shouldice-Jacobs</i>
+
 class Circle : public Shape
 {
 	private: 
-
-		double radius; // Holds the radius of the circle, acceptable values are anything > 0.00
+		
+		double radius; ///< Holds the radius of the circle, acceptable values are anything greater than 0.00
 
 	public:
 
 		// Constructors
 		
-		Circle(string colour, double radius); // Creates a circle object when the colour and radius are present, validates that radius > 0.00
-		Circle(void);							  // Default constructor sets the value of radius == 0.00
+		Circle(string colour, double radius); // Instantiates a circle object when parameters are present
+		Circle(void);						  // Default circle constructor
 
 		// Decontructors 
 
-		virtual ~Circle(void); // Deletes the circle object
+		virtual ~Circle(void);  // Deletes an instance of a circle object
 
 		// Methods
 
-		double GetRadius(void);			  // Gets the current value of radius
-		bool SetRadius(double newRadius); // Sets the current value of radius and returns true if "newRadius" is > 0.00 else it will return false
+		double GetRadius(void);			  // Gets the radius of a circle
+		bool SetRadius(double newRadius); // Sets the radius of a circle, if it is an allowable value
 
-		virtual void Show(void);			   // Shows the values of a circle object, radius, circumfrence, area
-		virtual double Perimeter(void);		   // Calculates a circle objects total perimeter 
-		virtual double Area(void);			   // Calculates a circle objects total area
-		virtual double OverallDimension(void); // Calculates the diameter of the circle
+		virtual void Show(void);	      // Shows the current data-members and values of the circle
+		virtual double Perimeter(void);	  // Returns the circumfrence of the circle
+		virtual double Area(void);		  // Returns the area of the circle
+		virtual double OverallDimension(void); // Returns the diameter of the circle
 
 
 };
