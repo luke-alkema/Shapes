@@ -129,7 +129,7 @@ void Circle::Show(void)
 /// 
 ///	 <summary>  Goes through the equation to obtain a circles perimeter, 2 * PI * Radius, 
 ///			    if Radius == 5, this method would return about 31.4
-/// <\summary>
+/// </summary>
 /// 
 ///  \param none
 /// 
@@ -147,7 +147,7 @@ double Circle::Perimeter(void)
 /// 
 ///  <summary>  Goes through the equation to obtain a circles area, PI * (Radius ^ 2), 
 ///			    if Radius == 5, this method would return about 78.5
-/// <\summary>
+/// </summary>
 /// 
 ///  \param none
 /// 
@@ -165,7 +165,7 @@ double Circle::Area(void)
 /// 
 ///  <summary>  Goes through the equation to obtain a circles diameter, Radius * 2, 
 ///			    if Radius == 5, this method would return 10.0
-/// <\summary>
+/// </summary>
 /// 
 ///  \param none
 /// 
