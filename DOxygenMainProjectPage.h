@@ -36,7 +36,7 @@
 /// <hr>
 /// \section notes Special Release Notes
 /// If you are tracking the versioning of your project software (as you would in the real world) then this is a good place to
-/// indicate (on a per version basis):
+/// indicate (on a per version basis): 1.0
 /// - features added to the software
 /// - incidents / bugs / issues fixed
 /// - etc.

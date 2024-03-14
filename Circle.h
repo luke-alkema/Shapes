@@ -14,6 +14,8 @@
 ///			  Circle class adds multiple functions that make use of Pi and the circles radius to perform calculations which can be displayed to the user.
 /// </summary>
 /// 
+/// \see Shape
+/// 
 /// \author <i>Dylan Shouldice-Jacobs</i>
 
 class Circle : public Shape

@@ -14,6 +14,7 @@
 /// 
 /// \return Since this is a <i>constructor</i> of the circle class, their is no return value
 /// \see ~Circle()
+/// \see Shape(string, string)
 Circle::Circle(string newColour, double newRadius) : Shape("Circle", newColour)
 {
 	if (newRadius <= MIN_RADIUS) // Radius is less then 0.00, set to 0.00, else allow input value
@@ -38,6 +39,7 @@ Circle::Circle(string newColour, double newRadius) : Shape("Circle", newColour)
 /// 
 /// \return Since this is a <i>constructor</i> of the circle class, their is no return value
 /// \see ~Circle()
+/// \see Shape()
 Circle::Circle(void) : Shape()
 {
 	radius = MIN_RADIUS; 
