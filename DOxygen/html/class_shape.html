@@ -22,7 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="shapes.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="circle.jpeg"/></td>
   <td id="projectalign">
    <div id="projectname">The Shapes Class Project
    </div>
@@ -117,10 +117,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0ff6cb644c5a6bd76cc665ebaaa491e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is used to change the name of a <a class="el" href="class_shape.html" title="The purpose of the Shape class is to model a shape to its most abstract level, its name and its colou...">Shape</a> object, safely.  <br /></td></tr>
 <tr class="separator:a0ff6cb644c5a6bd76cc665ebaaa491e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18c4ee2257909bf4f84ea4e4b09d575e" id="r_a18c4ee2257909bf4f84ea4e4b09d575e"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18c4ee2257909bf4f84ea4e4b09d575e">Perimeter</a> (void)=0</td></tr>
+<tr class="memdesc:a18c4ee2257909bf4f84ea4e4b09d575e"><td class="mdescLeft">&#160;</td><td class="mdescRight">pure virutal method to be implemented in child-classes, to calculate the respective shapes permimeter  <br /></td></tr>
 <tr class="separator:a18c4ee2257909bf4f84ea4e4b09d575e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fdf099ed5eefbc508a4660df0f690a0" id="r_a0fdf099ed5eefbc508a4660df0f690a0"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fdf099ed5eefbc508a4660df0f690a0">Area</a> (void)=0</td></tr>
+<tr class="memdesc:a0fdf099ed5eefbc508a4660df0f690a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">pure virutal method to be implemented in child-classes, to calculate the respective shapes area  <br /></td></tr>
 <tr class="separator:a0fdf099ed5eefbc508a4660df0f690a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75a0cb162699095d35fc86414f2d84fd" id="r_a75a0cb162699095d35fc86414f2d84fd"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75a0cb162699095d35fc86414f2d84fd">OverallDimension</a> (void)=0</td></tr>
+<tr class="memdesc:a75a0cb162699095d35fc86414f2d84fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">pure virutal method to be implemented in child-classes, to calculate the respective shapes trait dimension  <br /></td></tr>
 <tr class="separator:a75a0cb162699095d35fc86414f2d84fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -137,7 +140,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>colour</b></td></tr
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The purpose of the <a class="el" href="class_shape.html" title="The purpose of the Shape class is to model a shape to its most abstract level, its name and its colou...">Shape</a> class is to model a shape to its most abstract level, its name and its colour. So specialized child classes to inherit from here. </p>
 <p>The shape class holds the general properties of any shape. The purpose of this shape class is to allow child classes to inherit from it, of which are acual specific shapes.<br  />
- The shape class can change the colour and name of the shape(red, square), and allow users to change and /or access the data members name and colour.<br  />
+ The shape class is in charge of initialising the colour and name of the shape, and allow users to change and /or access the data members name and colour.<br  />
  The class also has 3 pure virtual functions so that child classes can use the concept of them. They must be overridden of course since the methods will change given different shapes.</p>
 <dl class="section author"><dt>Author</dt><dd><em>Luke Akema &amp; Dylan Shouldice-Jacobs</em> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -227,6 +230,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>colour</b></td></tr
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>pure virutal method to be implemented in child-classes, to calculate the respective shapes area </p>
 
 <p>Implemented in <a class="el" href="class_circle.html#a05a0dc93bb1ffad54760f4546d45e76f">Circle</a>, and <a class="el" href="class_square.html#a0b19881092536de79a7a2faa504a7449">Square</a>.</p>
 
@@ -371,6 +376,8 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>colour</b></td></tr
 </table>
 </div><div class="memdoc">
 
+<p>pure virutal method to be implemented in child-classes, to calculate the respective shapes trait dimension </p>
+
 <p>Implemented in <a class="el" href="class_circle.html#a75932ea73a728bbfbcc09d6060297845">Circle</a>, and <a class="el" href="class_square.html#a1c5ae76ba87ed24e83fee990131abe5b">Square</a>.</p>
 
 </div>
@@ -398,13 +405,15 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>colour</b></td></tr
 </table>
 </div><div class="memdoc">
 
+<p>pure virutal method to be implemented in child-classes, to calculate the respective shapes permimeter </p>
+
 <p>Implemented in <a class="el" href="class_circle.html#ab1f2e72101e2f0aa33834370f0b23bd6">Circle</a>, and <a class="el" href="class_square.html#ae046b540c8544e422f628b662f1e86e3">Square</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/shoul/source/repos/LukeleLegend/A-04/<a class="el" href="_shape_8h_source.html">Shape.h</a></li>
-<li>C:/Users/shoul/source/repos/LukeleLegend/A-04/<b>Shape.cpp</b></li>
+<li>C:/Users/lukea/OneDrive - Conestoga College/##Programming/Week 6/Shapes Assignment/<a class="el" href="_shape_8h_source.html">Shape.h</a></li>
+<li>C:/Users/lukea/OneDrive - Conestoga College/##Programming/Week 6/Shapes Assignment/<b>Shape.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

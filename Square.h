@@ -8,7 +8,8 @@
 
 
 /// \class Square
-/// 
+// This below puts in a picture a square. The '\n' stops the text wrapping 
+/// <img src="square.jpeg" align="left"/>\n\n\n\n\n\n\n\n\n\n\n\n
 /// \brief The purpose of the Square class is to extend from the Shape class and further model a Square
 /// 
 /// <summary> This class adds onto the Shape class by adding the data-member sideLength. 

@@ -7,7 +7,8 @@
 #define MIN_RADIUS 0.00
 
 /// \class Circle
-/// 
+// This below puts in a picture a square. The '\n' stops the text wrapping 
+/// <img src="circle.jpeg" align="left"/>\n\n\n\n\n\n\n\n\n\n\n\n
 /// \brief The purpose of the Circle class is to extend from the Shape class and further model a Circle
 /// 
 /// <summary> This class adds onto the Shape class by adding the data-member radius as well as the PI constant allowing an actual shape to be made from the inheritance relatioship between these 2 classes. 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['project_20br_0',['Shapes Project   &lt;br&gt;',['../index.html',1,'']]]
+  ['shapes_20project_0',['Shapes Project',['../index.html',1,'']]]
 ];

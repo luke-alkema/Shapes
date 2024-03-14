@@ -12,7 +12,7 @@ using namespace std;
 /// \brief The purpose of the Shape class is to model a shape to its most abstract level, its name and its colour. So specialized child classes to inherit from here 
 /// 
 /// <summary> The shape class holds the general properties of any shape. The purpose of this shape class is to allow child classes to inherit from it, 
-///           of which are acual specific shapes.<br> The shape class can change the colour and name of the shape(red, square), and allow users to change
+///           of which are acual specific shapes.<br> The shape class is in charge of initialising the colour and name of the shape, and allow users to change
 ///           and /or access the data members name and colour.<br> The class also has 3 pure virtual functions so that child classes can use the concept of them.
 ///           They must be overridden of course since the methods will change given different shapes.
 /// </summary>
@@ -42,9 +42,12 @@ public:
 
 	/* ---------- PURE VIRTUAL FUNCTION PROTOTYPES --------- */
 
-	virtual double Perimeter(void) = 0;   //calculates perimeter
-	virtual double Area(void) = 0;		  //calculates area
-	virtual double OverallDimension(void) = 0;    //calculates overalldimension
+/// \brief pure virutal method to be implemented in child-classes, to calculate the respective shapes permimeter
+	virtual double Perimeter(void) = 0;			 //calculates perimeter
+/// \brief pure virutal method to be implemented in child-classes, to calculate the respective shapes area
+	virtual double Area(void) = 0;				 //calculates area
+/// \brief pure virutal method to be implemented in child-classes, to calculate the respective shapes trait dimension
+	virtual double OverallDimension(void) = 0;   //calculates overalldimension
 
 	/*-------------Function Prototype----------*/
 	

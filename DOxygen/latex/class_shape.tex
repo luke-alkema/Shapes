@@ -31,11 +31,11 @@ bool \mbox{\hyperlink{class_shape_a59abadfdb1fa58f8afb7c9fcc9ac1ede}{Change\+Col
 bool \mbox{\hyperlink{class_shape_a0ff6cb644c5a6bd76cc665ebaaa491e1}{Change\+Name}} (string new\+Name)
 \begin{DoxyCompactList}\small\item\em Is used to change the name of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_shape_a18c4ee2257909bf4f84ea4e4b09d575e}{Perimeter}} (void)=0
-\item 
+\begin{DoxyCompactList}\small\item\em pure virutal method to be implemented in child-\/classes, to calculate the respective shapes permimeter \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_shape_a0fdf099ed5eefbc508a4660df0f690a0}{Area}} (void)=0
-\item 
+\begin{DoxyCompactList}\small\item\em pure virutal method to be implemented in child-\/classes, to calculate the respective shapes area \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_shape_a75a0cb162699095d35fc86414f2d84fd}{Overall\+Dimension}} (void)=0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em pure virutal method to be implemented in child-\/classes, to calculate the respective shapes trait dimension \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,7 +51,7 @@ string {\bfseries colour}
 The purpose of the \doxylink{class_shape}{Shape} class is to model a shape to its most abstract level, its name and its colour. So specialized child classes to inherit from here. 
 
 The shape class holds the general properties of any shape. The purpose of this shape class is to allow child classes to inherit from it, of which are acual specific shapes.~\newline
- The shape class can change the colour and name of the shape(red, square), and allow users to change and /or access the data members name and colour.~\newline
+ The shape class is in charge of initialising the colour and name of the shape, and allow users to change and /or access the data members name and colour.~\newline
  The class also has 3 pure virtual functions so that child classes can use the concept of them. They must be overridden of course since the methods will change given different shapes.
 
 \begin{DoxyAuthor}{Author}
@@ -116,6 +116,10 @@ Since this is a {\itshape constructor} of the shape class, their is no return va
 \index{Area@{Area}!Shape@{Shape}}
 \doxysubsubsection{\texorpdfstring{Area()}{Area()}}
 {\footnotesize\ttfamily virtual double Shape\+::\+Area (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+pure virutal method to be implemented in child-\/classes, to calculate the respective shapes area 
 
 
 
@@ -221,6 +225,10 @@ This method returns a copy of the name value ~\newline
 
 
 
+pure virutal method to be implemented in child-\/classes, to calculate the respective shapes trait dimension 
+
+
+
 Implemented in \mbox{\hyperlink{class_circle_a75932ea73a728bbfbcc09d6060297845}{Circle}}, and \mbox{\hyperlink{class_square_a1c5ae76ba87ed24e83fee990131abe5b}{Square}}.
 
 \Hypertarget{class_shape_a18c4ee2257909bf4f84ea4e4b09d575e}\label{class_shape_a18c4ee2257909bf4f84ea4e4b09d575e} 
@@ -231,11 +239,15 @@ Implemented in \mbox{\hyperlink{class_circle_a75932ea73a728bbfbcc09d6060297845}{
 
 
 
+pure virutal method to be implemented in child-\/classes, to calculate the respective shapes permimeter 
+
+
+
 Implemented in \mbox{\hyperlink{class_circle_ab1f2e72101e2f0aa33834370f0b23bd6}{Circle}}, and \mbox{\hyperlink{class_square_ae046b540c8544e422f628b662f1e86e3}{Square}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/shoul/source/repos/\+Lukele\+Legend/\+A-\/04/Shape.\+h\item 
-C\+:/\+Users/shoul/source/repos/\+Lukele\+Legend/\+A-\/04/Shape.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/lukea/\+One\+Drive -\/ Conestoga College/\#\#\+Programming/\+Week 6/\+Shapes Assignment/Shape.\+h\item 
+C\+:/\+Users/lukea/\+One\+Drive -\/ Conestoga College/\#\#\+Programming/\+Week 6/\+Shapes Assignment/Shape.\+cpp\end{DoxyCompactItemize}

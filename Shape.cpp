@@ -40,10 +40,6 @@ Shape::Shape(string newName, string newColour)
 	{
 		colour = "undefined";
 	}
-	//else (newColour.length() >= MAX_COLOUR_LENGTH || newColour.length() == 0)
-	//{
-	//	colour = "undefined";
-	//}
 }
 
 
