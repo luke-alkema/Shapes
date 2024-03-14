@@ -1,0 +1,89 @@
+\doxysection{Square Class Reference}
+\hypertarget{class_square}{}\label{class_square}\index{Square@{Square}}
+Inheritance diagram for Square\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_square}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_square_ab99fbb5ea8ba88349120e2f4f9a18b8a}\label{class_square_ab99fbb5ea8ba88349120e2f4f9a18b8a} 
+{\bfseries Square} (string new\+Colour, double new\+Side\+Length)
+\item 
+\Hypertarget{class_square_accda78726f7986e834e13838bdc68435}\label{class_square_accda78726f7986e834e13838bdc68435} 
+double {\bfseries Get\+Side\+Length} (void)
+\item 
+\Hypertarget{class_square_a52ab280f0bf6d510d41488a1e5d3e0df}\label{class_square_a52ab280f0bf6d510d41488a1e5d3e0df} 
+bool {\bfseries Change\+Side\+Length} (double new\+Side\+Length)
+\item 
+\Hypertarget{class_square_a2a7e3a73cfbe9045d8a27dd8f738fda9}\label{class_square_a2a7e3a73cfbe9045d8a27dd8f738fda9} 
+void {\bfseries Show} (void)
+\item 
+virtual double \mbox{\hyperlink{class_square_ae046b540c8544e422f628b662f1e86e3}{Perimeter}} (void)
+\item 
+virtual double \mbox{\hyperlink{class_square_a0b19881092536de79a7a2faa504a7449}{Area}} (void)
+\item 
+virtual double \mbox{\hyperlink{class_square_a1c5ae76ba87ed24e83fee990131abe5b}{Overall\+Dimension}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_shape}{Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shape_ad735b927c63c190803e2b9af27e4c25d}{Shape}} (string \mbox{\hyperlink{class_shape_afef5e9426226fd7af49fe48ec16b97f3}{name}}, string \mbox{\hyperlink{class_shape_a525db72bc0e96e0daa2c1bd0ce8cb076}{colour}})
+\begin{DoxyCompactList}\small\item\em To create a new instance of a shape object when all parameters are present. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shape_a2c81e227edd2803a084c65c75e4ffd5b}{Shape}} (void)
+\begin{DoxyCompactList}\small\item\em To create a new instance of a shape object when no parameters are present. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_shape_a88554b555eae9ec283a624ef0e8d8305}{Get\+Colour}} (void)
+\begin{DoxyCompactList}\small\item\em Is used to access the colour of a shape object. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_shape_a7af8e23f8cce0f52e526b45b45818917}{Get\+Name}} (void)
+\begin{DoxyCompactList}\small\item\em Is used to access the name of a shape object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shape_a59abadfdb1fa58f8afb7c9fcc9ac1ede}{Change\+Colour}} (string new\+Colour)
+\begin{DoxyCompactList}\small\item\em Is used to change the colour of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shape_a0ff6cb644c5a6bd76cc665ebaaa491e1}{Change\+Name}} (string new\+Name)
+\begin{DoxyCompactList}\small\item\em Is used to change the name of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_square_a581d664753056f6fb6f65e34345a8752}\label{class_square_a581d664753056f6fb6f65e34345a8752} 
+double {\bfseries side\+Length}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_square_a0b19881092536de79a7a2faa504a7449}\label{class_square_a0b19881092536de79a7a2faa504a7449} 
+\index{Square@{Square}!Area@{Area}}
+\index{Area@{Area}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{Area()}{Area()}}
+{\footnotesize\ttfamily double Square\+::\+Area (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_shape}{Shape}}.
+
+\Hypertarget{class_square_a1c5ae76ba87ed24e83fee990131abe5b}\label{class_square_a1c5ae76ba87ed24e83fee990131abe5b} 
+\index{Square@{Square}!OverallDimension@{OverallDimension}}
+\index{OverallDimension@{OverallDimension}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{OverallDimension()}{OverallDimension()}}
+{\footnotesize\ttfamily double Square\+::\+Overall\+Dimension (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_shape}{Shape}}.
+
+\Hypertarget{class_square_ae046b540c8544e422f628b662f1e86e3}\label{class_square_ae046b540c8544e422f628b662f1e86e3} 
+\index{Square@{Square}!Perimeter@{Perimeter}}
+\index{Perimeter@{Perimeter}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{Perimeter()}{Perimeter()}}
+{\footnotesize\ttfamily double Square\+::\+Perimeter (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_shape}{Shape}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/shoul/source/repos/\+Lukele\+Legend/\+A-\/04/Square.\+h\item 
+C\+:/\+Users/shoul/source/repos/\+Lukele\+Legend/\+A-\/04/Square.\+cpp\end{DoxyCompactItemize}

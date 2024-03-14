@@ -1,0 +1,241 @@
+\doxysection{Shape Class Reference}
+\hypertarget{class_shape}{}\label{class_shape}\index{Shape@{Shape}}
+
+
+The purpose of the \doxylink{class_shape}{Shape} class is to model a shape to its most abstract level, its name and its colour. So specialized child classes to inherit from here.  
+
+
+
+
+{\ttfamily \#include $<$Shape.\+h$>$}
+
+Inheritance diagram for Shape\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shape}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shape_ad735b927c63c190803e2b9af27e4c25d}{Shape}} (string \mbox{\hyperlink{class_shape_afef5e9426226fd7af49fe48ec16b97f3}{name}}, string \mbox{\hyperlink{class_shape_a525db72bc0e96e0daa2c1bd0ce8cb076}{colour}})
+\begin{DoxyCompactList}\small\item\em To create a new instance of a shape object when all parameters are present. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shape_a2c81e227edd2803a084c65c75e4ffd5b}{Shape}} (void)
+\begin{DoxyCompactList}\small\item\em To create a new instance of a shape object when no parameters are present. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_shape_a88554b555eae9ec283a624ef0e8d8305}{Get\+Colour}} (void)
+\begin{DoxyCompactList}\small\item\em Is used to access the colour of a shape object. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_shape_a7af8e23f8cce0f52e526b45b45818917}{Get\+Name}} (void)
+\begin{DoxyCompactList}\small\item\em Is used to access the name of a shape object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shape_a59abadfdb1fa58f8afb7c9fcc9ac1ede}{Change\+Colour}} (string new\+Colour)
+\begin{DoxyCompactList}\small\item\em Is used to change the colour of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shape_a0ff6cb644c5a6bd76cc665ebaaa491e1}{Change\+Name}} (string new\+Name)
+\begin{DoxyCompactList}\small\item\em Is used to change the name of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_shape_a18c4ee2257909bf4f84ea4e4b09d575e}{Perimeter}} (void)=0
+\item 
+virtual double \mbox{\hyperlink{class_shape_a0fdf099ed5eefbc508a4660df0f690a0}{Area}} (void)=0
+\item 
+virtual double \mbox{\hyperlink{class_shape_a75a0cb162699095d35fc86414f2d84fd}{Overall\+Dimension}} (void)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_shape_afef5e9426226fd7af49fe48ec16b97f3}\label{class_shape_afef5e9426226fd7af49fe48ec16b97f3} 
+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em The name of the shape. \end{DoxyCompactList}\item 
+\Hypertarget{class_shape_a525db72bc0e96e0daa2c1bd0ce8cb076}\label{class_shape_a525db72bc0e96e0daa2c1bd0ce8cb076} 
+string {\bfseries colour}
+\begin{DoxyCompactList}\small\item\em The colour of the shape. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The purpose of the \doxylink{class_shape}{Shape} class is to model a shape to its most abstract level, its name and its colour. So specialized child classes to inherit from here. 
+
+The shape class holds the general properties of any shape. The purpose of this shape class is to allow child classes to inherit from it, of which are acual specific shapes.~\newline
+ The shape class can change the colour and name of the shape(red, square), and allow users to change and /or access the data members name and colour.~\newline
+ The class also has 3 pure virtual functions so that child classes can use the concept of them. They must be overridden of course since the methods will change given different shapes.
+
+\begin{DoxyAuthor}{Author}
+{\itshape Luke Akema \& Dylan Shouldice-\/\+Jacobs} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_shape_ad735b927c63c190803e2b9af27e4c25d}\label{class_shape_ad735b927c63c190803e2b9af27e4c25d} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{string}]{new\+Name,  }\item[{string}]{new\+Colour }\end{DoxyParamCaption})}
+
+
+
+To create a new instance of a shape object when all parameters are present. 
+
+{\bfseries{Details}}
+
+When a \doxylink{class_shape}{Shape} is being created and all data-\/members are present in the parameter list, this constructor will check if the name is valid otherwise it is set to "{}\+Unknown"{}. Then checks if the colour is valid otherwise the colour is set to "{}undefined"{}. If their is a valid value for either of those parameters is it set to that value ~\newline
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & -\/ {\bfseries{string}} \+: holds the value of the new name for the shape being instantiated \\
+\hline
+{\em new\+Colour} & -\/ {\bfseries{string}} \+: holds the value of the new colour for the shape being instantiated\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Since this is a {\itshape constructor} of the shape class, their is no return value 
+\end{DoxyReturn}
+\Hypertarget{class_shape_a2c81e227edd2803a084c65c75e4ffd5b}\label{class_shape_a2c81e227edd2803a084c65c75e4ffd5b} 
+\index{Shape@{Shape}!Shape@{Shape}}
+\index{Shape@{Shape}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Shape()}{Shape()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Shape\+::\+Shape (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+To create a new instance of a shape object when no parameters are present. 
+
+{\bfseries{Details}}
+
+When a \doxylink{class_shape}{Shape} is being created and no data-\/members are present in the parameter list, this constructor will set the value of name to "{}\+Unknown"{} and the value of colour to "{}undefined"{} ~\newline
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Since this is a {\itshape constructor} of the shape class, their is no return value 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shape_a0fdf099ed5eefbc508a4660df0f690a0}\label{class_shape_a0fdf099ed5eefbc508a4660df0f690a0} 
+\index{Shape@{Shape}!Area@{Area}}
+\index{Area@{Area}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Area()}{Area()}}
+{\footnotesize\ttfamily virtual double Shape\+::\+Area (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_circle_a05a0dc93bb1ffad54760f4546d45e76f}{Circle}}.
+
+\Hypertarget{class_shape_a59abadfdb1fa58f8afb7c9fcc9ac1ede}\label{class_shape_a59abadfdb1fa58f8afb7c9fcc9ac1ede} 
+\index{Shape@{Shape}!ChangeColour@{ChangeColour}}
+\index{ChangeColour@{ChangeColour}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{ChangeColour()}{ChangeColour()}}
+{\footnotesize\ttfamily bool Shape\+::\+Change\+Colour (\begin{DoxyParamCaption}\item[{string}]{new\+Colour }\end{DoxyParamCaption})}
+
+
+
+Is used to change the colour of a \doxylink{class_shape}{Shape} object, safely. 
+
+{\bfseries{Details}}
+
+In the case that an untrusted source is changing the colour they can use this to ensure no invalid value make their way in, if it is valid it is set, else the colour is unchanged
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Colour} & -\/ {\bfseries{string}} \+: holds the value for the new name of the shape\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This method returns a boolean status code that signifies if the value was changed ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_shape_a0ff6cb644c5a6bd76cc665ebaaa491e1}\label{class_shape_a0ff6cb644c5a6bd76cc665ebaaa491e1} 
+\index{Shape@{Shape}!ChangeName@{ChangeName}}
+\index{ChangeName@{ChangeName}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{ChangeName()}{ChangeName()}}
+{\footnotesize\ttfamily bool Shape\+::\+Change\+Name (\begin{DoxyParamCaption}\item[{string}]{new\+Name }\end{DoxyParamCaption})}
+
+
+
+Is used to change the name of a \doxylink{class_shape}{Shape} object, safely. 
+
+{\bfseries{Details}}
+
+In the case that an untrusted source is changing the name they can use this to ensure no invalid value make their way in, if it is valid it is set, else the name is unchanged
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & -\/ {\bfseries{string}} \+: holds the value for the new name of the shape\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This method returns a boolean status code that signifies if the value was changed ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_shape_a88554b555eae9ec283a624ef0e8d8305}\label{class_shape_a88554b555eae9ec283a624ef0e8d8305} 
+\index{Shape@{Shape}!GetColour@{GetColour}}
+\index{GetColour@{GetColour}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{GetColour()}{GetColour()}}
+{\footnotesize\ttfamily string Shape\+::\+Get\+Colour (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Is used to access the colour of a shape object. 
+
+{\bfseries{Details}}
+
+When an entity needs access to the colour of the shape this method will return a copy of the colour, ensuring the shapes data-\/member is unchanged
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This method returns a copy of the colour value ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_shape_a7af8e23f8cce0f52e526b45b45818917}\label{class_shape_a7af8e23f8cce0f52e526b45b45818917} 
+\index{Shape@{Shape}!GetName@{GetName}}
+\index{GetName@{GetName}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily string Shape\+::\+Get\+Name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Is used to access the name of a shape object. 
+
+{\bfseries{Details}}
+
+When an entity needs access to the name of the shape this method will return a copy of the name, ensuring the shapes data-\/member is unchanged
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This method returns a copy of the name value ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_shape_a75a0cb162699095d35fc86414f2d84fd}\label{class_shape_a75a0cb162699095d35fc86414f2d84fd} 
+\index{Shape@{Shape}!OverallDimension@{OverallDimension}}
+\index{OverallDimension@{OverallDimension}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{OverallDimension()}{OverallDimension()}}
+{\footnotesize\ttfamily virtual double Shape\+::\+Overall\+Dimension (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_circle_a75932ea73a728bbfbcc09d6060297845}{Circle}}.
+
+\Hypertarget{class_shape_a18c4ee2257909bf4f84ea4e4b09d575e}\label{class_shape_a18c4ee2257909bf4f84ea4e4b09d575e} 
+\index{Shape@{Shape}!Perimeter@{Perimeter}}
+\index{Perimeter@{Perimeter}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{Perimeter()}{Perimeter()}}
+{\footnotesize\ttfamily virtual double Shape\+::\+Perimeter (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_circle_ab1f2e72101e2f0aa33834370f0b23bd6}{Circle}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/shoul/source/repos/\+Lukele\+Legend/\+A-\/04/Shape.\+h\item 
+C\+:/\+Users/shoul/source/repos/\+Lukele\+Legend/\+A-\/04/Shape.\+cpp\end{DoxyCompactItemize}

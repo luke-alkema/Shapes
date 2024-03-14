@@ -1,0 +1,309 @@
+\doxysection{Circle Class Reference}
+\hypertarget{class_circle}{}\label{class_circle}\index{Circle@{Circle}}
+
+
+The purpose of the \doxylink{class_circle}{Circle} class is to extend from the \doxylink{class_shape}{Shape} class and further model a \doxylink{class_circle}{Circle}.  
+
+
+
+
+{\ttfamily \#include $<$Circle.\+h$>$}
+
+Inheritance diagram for Circle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_circle}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_circle_a5c39dcfd299c0ed060807cfcad0e3626}{Circle}} (string \mbox{\hyperlink{class_shape_a525db72bc0e96e0daa2c1bd0ce8cb076}{colour}}, double \mbox{\hyperlink{class_circle_a5a0212ba705f57d762bd6b202e3d10ed}{radius}})
+\begin{DoxyCompactList}\small\item\em To create a new instance of a circle object when all parameters are present. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_circle_a3ea668d8be6a76ab7033c43a57874a11}{Circle}} (void)
+\begin{DoxyCompactList}\small\item\em To create a new instance of a circle object when no parameters are present. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_circle_a22d1064e650bcb96834a3056277a4185}{\texorpdfstring{$\sim$}{\string~}\+Circle}} (void)
+\begin{DoxyCompactList}\small\item\em Is called upon when a circle object needs to be deleted, when it loses scope inside the program. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_circle_a1d5a7069b34da46ae0c3a1160ef5ff29}{Get\+Radius}} (void)
+\begin{DoxyCompactList}\small\item\em Is used when a part of the program needs access to this circles radius it will return it to them. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_circle_a09f07ad86e16507b6db8bee35aa67962}{Set\+Radius}} (double new\+Radius)
+\begin{DoxyCompactList}\small\item\em Is used when a entity outside of this class wants to change this circles radius. Ensures no invalid values are allowed. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_circle_a9ade44170d48efc91d3c35e8be4e4b5a}{Show}} (void)
+\begin{DoxyCompactList}\small\item\em Used to display all values related to the circle object, name, colour, radius,. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_circle_ab1f2e72101e2f0aa33834370f0b23bd6}{Perimeter}} (void)
+\begin{DoxyCompactList}\small\item\em Calculates the circles permimeter. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_circle_a05a0dc93bb1ffad54760f4546d45e76f}{Area}} (void)
+\begin{DoxyCompactList}\small\item\em Calcultes the circles area. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_circle_a75932ea73a728bbfbcc09d6060297845}{Overall\+Dimension}} (void)
+\begin{DoxyCompactList}\small\item\em Calculates the circle diameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_shape}{Shape}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shape_ad735b927c63c190803e2b9af27e4c25d}{Shape}} (string \mbox{\hyperlink{class_shape_afef5e9426226fd7af49fe48ec16b97f3}{name}}, string \mbox{\hyperlink{class_shape_a525db72bc0e96e0daa2c1bd0ce8cb076}{colour}})
+\begin{DoxyCompactList}\small\item\em To create a new instance of a shape object when all parameters are present. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_shape_a2c81e227edd2803a084c65c75e4ffd5b}{Shape}} (void)
+\begin{DoxyCompactList}\small\item\em To create a new instance of a shape object when no parameters are present. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_shape_a88554b555eae9ec283a624ef0e8d8305}{Get\+Colour}} (void)
+\begin{DoxyCompactList}\small\item\em Is used to access the colour of a shape object. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_shape_a7af8e23f8cce0f52e526b45b45818917}{Get\+Name}} (void)
+\begin{DoxyCompactList}\small\item\em Is used to access the name of a shape object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shape_a59abadfdb1fa58f8afb7c9fcc9ac1ede}{Change\+Colour}} (string new\+Colour)
+\begin{DoxyCompactList}\small\item\em Is used to change the colour of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_shape_a0ff6cb644c5a6bd76cc665ebaaa491e1}{Change\+Name}} (string new\+Name)
+\begin{DoxyCompactList}\small\item\em Is used to change the name of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_circle_a5a0212ba705f57d762bd6b202e3d10ed}\label{class_circle_a5a0212ba705f57d762bd6b202e3d10ed} 
+double {\bfseries radius}
+\begin{DoxyCompactList}\small\item\em Holds the radius of the circle, acceptable values are anything greater than 0.\+00. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The purpose of the \doxylink{class_circle}{Circle} class is to extend from the \doxylink{class_shape}{Shape} class and further model a \doxylink{class_circle}{Circle}. 
+
+This class adds onto the \doxylink{class_shape}{Shape} class by adding the data-\/member radius as well as the PI constant allowing an actual shape to be made from the inheritance relatioship between these 2 classes. \doxylink{class_circle}{Circle} class adds multiple functions that make use of Pi and the circles radius to perform calculations which can be displayed to the user.
+
+\begin{DoxyAuthor}{Author}
+{\itshape Dylan Shouldice-\/\+Jacobs} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_circle_a5c39dcfd299c0ed060807cfcad0e3626}\label{class_circle_a5c39dcfd299c0ed060807cfcad0e3626} 
+\index{Circle@{Circle}!Circle@{Circle}}
+\index{Circle@{Circle}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{Circle()}{Circle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Circle\+::\+Circle (\begin{DoxyParamCaption}\item[{string}]{new\+Colour,  }\item[{double}]{new\+Radius }\end{DoxyParamCaption})}
+
+
+
+To create a new instance of a circle object when all parameters are present. 
+
+{\bfseries{Details}}
+
+When a circle is being created and the colour and radius have been passed, this constructor calls upon the \doxylink{class_shape}{Shape}\textquotesingle{}s constructor to create the shape inside of the circle, as well as name it "{}\+Circle"{} and initialize the colour chosen.~\newline
+ Then the \doxylink{class_circle}{Circle} constructor verifies that the new\+Radius is within allowable values, or else radius is set to minimum radius ~\newline
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Colour} & -\/ {\bfseries{string}} \+: holds the value of the new colour for the circle being instantiated \\
+\hline
+{\em new\+Radius} & -\/ {\bfseries{double}} \+: holds the value of the new radius for the circle being instantiated\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Since this is a {\itshape constructor} of the circle class, their is no return value 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_circle_a22d1064e650bcb96834a3056277a4185}{\texorpdfstring{$\sim$}{\string~}\+Circle()} 
+\end{DoxySeeAlso}
+\Hypertarget{class_circle_a3ea668d8be6a76ab7033c43a57874a11}\label{class_circle_a3ea668d8be6a76ab7033c43a57874a11} 
+\index{Circle@{Circle}!Circle@{Circle}}
+\index{Circle@{Circle}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{Circle()}{Circle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Circle\+::\+Circle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+To create a new instance of a circle object when no parameters are present. 
+
+{\bfseries{Details}}
+
+When a circle is being created with no preset values, this constructor chains with \doxylink{class_shape}{Shape}\textquotesingle{}s default constructor to set the name to "{}\+Unknown"{} and colour to "{}undefined"{}. Then this constructor sets the inital radius to 0.\+00 the minimum radius ~\newline
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Since this is a {\itshape constructor} of the circle class, their is no return value 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_circle_a22d1064e650bcb96834a3056277a4185}{\texorpdfstring{$\sim$}{\string~}\+Circle()} 
+\end{DoxySeeAlso}
+\Hypertarget{class_circle_a22d1064e650bcb96834a3056277a4185}\label{class_circle_a22d1064e650bcb96834a3056277a4185} 
+\index{Circle@{Circle}!````~Circle@{\texorpdfstring{$\sim$}{\string~}Circle}}
+\index{````~Circle@{\texorpdfstring{$\sim$}{\string~}Circle}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Circle()}{\string~Circle()}}
+{\footnotesize\ttfamily Circle\+::\texorpdfstring{$\sim$}{\string~}\+Circle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Is called upon when a circle object needs to be deleted, when it loses scope inside the program. 
+
+{\bfseries{Details}}
+
+Will output a message singyfying that the \doxylink{class_circle}{Circle} object has been destroyed, confirming it is no longer in memory
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Since this is a {\itshape destructor} of the circle class, their is no return value 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_circle_a5c39dcfd299c0ed060807cfcad0e3626}{Circle(string, double)} 
+
+\doxylink{class_circle_a3ea668d8be6a76ab7033c43a57874a11}{Circle()} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_circle_a05a0dc93bb1ffad54760f4546d45e76f}\label{class_circle_a05a0dc93bb1ffad54760f4546d45e76f} 
+\index{Circle@{Circle}!Area@{Area}}
+\index{Area@{Area}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{Area()}{Area()}}
+{\footnotesize\ttfamily double Circle\+::\+Area (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calcultes the circles area. 
+
+{\bfseries{Details}}
+
+Goes through the equation to obtain a circles area, PI \texorpdfstring{$\ast$}{*} (Radius \texorpdfstring{$^\wedge$}{\string^} 2), if Radius == 5, this method would return about 78.\+5 \texorpdfstring{$<$}{<}\textbackslash{}summary\texorpdfstring{$>$}{>}
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the area as a double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape}{Shape}}.
+
+\Hypertarget{class_circle_a1d5a7069b34da46ae0c3a1160ef5ff29}\label{class_circle_a1d5a7069b34da46ae0c3a1160ef5ff29} 
+\index{Circle@{Circle}!GetRadius@{GetRadius}}
+\index{GetRadius@{GetRadius}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{GetRadius()}{GetRadius()}}
+{\footnotesize\ttfamily double Circle\+::\+Get\+Radius (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Is used when a part of the program needs access to this circles radius it will return it to them. 
+
+{\bfseries{Details}}
+
+In the case that a entity foriegn to the circle class would like to view or use the radius of a circle, this method gives them access
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This method returns the value of the radius of the circle this was invoked on 
+\end{DoxyReturn}
+\Hypertarget{class_circle_a75932ea73a728bbfbcc09d6060297845}\label{class_circle_a75932ea73a728bbfbcc09d6060297845} 
+\index{Circle@{Circle}!OverallDimension@{OverallDimension}}
+\index{OverallDimension@{OverallDimension}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{OverallDimension()}{OverallDimension()}}
+{\footnotesize\ttfamily double Circle\+::\+Overall\+Dimension (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculates the circle diameter. 
+
+{\bfseries{Details}}
+
+Goes through the equation to obtain a circles diameter, Radius \texorpdfstring{$\ast$}{*} 2, if Radius == 5, this method would return 10.\+0 \texorpdfstring{$<$}{<}\textbackslash{}summary\texorpdfstring{$>$}{>}
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the diameter as a double ~\newline
+ 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape}{Shape}}.
+
+\Hypertarget{class_circle_ab1f2e72101e2f0aa33834370f0b23bd6}\label{class_circle_ab1f2e72101e2f0aa33834370f0b23bd6} 
+\index{Circle@{Circle}!Perimeter@{Perimeter}}
+\index{Perimeter@{Perimeter}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{Perimeter()}{Perimeter()}}
+{\footnotesize\ttfamily double Circle\+::\+Perimeter (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calculates the circles permimeter. 
+
+{\bfseries{Details}}
+
+Goes through the equation to obtain a circles perimeter, 2 \texorpdfstring{$\ast$}{*} PI \texorpdfstring{$\ast$}{*} Radius, if Radius == 5, this method would return about 31.\+4 \texorpdfstring{$<$}{<}\textbackslash{}summary\texorpdfstring{$>$}{>}
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the perimeter as a double 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_shape}{Shape}}.
+
+\Hypertarget{class_circle_a09f07ad86e16507b6db8bee35aa67962}\label{class_circle_a09f07ad86e16507b6db8bee35aa67962} 
+\index{Circle@{Circle}!SetRadius@{SetRadius}}
+\index{SetRadius@{SetRadius}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{SetRadius()}{SetRadius()}}
+{\footnotesize\ttfamily bool Circle\+::\+Set\+Radius (\begin{DoxyParamCaption}\item[{double}]{new\+Radius }\end{DoxyParamCaption})}
+
+
+
+Is used when a entity outside of this class wants to change this circles radius. Ensures no invalid values are allowed. 
+
+{\bfseries{Details}}
+
+In the case that the radius needs to be changed by an untrusted source, this method allows them to without accepting invalid radius values
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Radius} & -\/ {\bfseries{double}} \+: holds the value of the new radius for the circle being updated\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This method returns a boolean status code that signifies if the value was changed ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_circle_a9ade44170d48efc91d3c35e8be4e4b5a}\label{class_circle_a9ade44170d48efc91d3c35e8be4e4b5a} 
+\index{Circle@{Circle}!Show@{Show}}
+\index{Show@{Show}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{Show()}{Show()}}
+{\footnotesize\ttfamily void Circle\+::\+Show (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Used to display all values related to the circle object, name, colour, radius,. 
+
+{\bfseries{Details}}
+
+Shows each of the data-\/members related to a circle object, in a format that makes sense to a person
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/shoul/source/repos/\+Lukele\+Legend/\+A-\/04/Circle.\+h\item 
+C\+:/\+Users/shoul/source/repos/\+Lukele\+Legend/\+A-\/04/Circle.\+cpp\end{DoxyCompactItemize}
