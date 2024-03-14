@@ -127,7 +127,7 @@ void Square::Show(void)
 /// 
 ///	 <summary>  Goes through the equation to obtain a squares perimeter, 4 * sideLength. 
 ///			    If sideLength == 5, this method would return 20
-/// <\summary>
+/// </summary>
 /// 
 ///  \param none
 /// 
@@ -143,7 +143,7 @@ double Square::Perimeter(void)
 /// 
 ///  <summary>  Goes through the equation to obtain a squares area, sideLength * sideLength, 
 ///			    if sideLength == 5, this method would return 25
-/// <\summary>
+/// </summary>
 /// 
 ///  \param none
 /// 
@@ -158,7 +158,7 @@ double Square::Area(void)
 /// \details <b>Details</b> 
 /// 
 ///  <summary>  Returns the SideLength of the square. This overalldimension method is identical to the getSideLength method.
-/// <\summary>
+/// </summary>
 /// 
 ///  \param none
 /// 

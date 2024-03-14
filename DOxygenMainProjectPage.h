@@ -30,6 +30,8 @@
 /// Where the <i>Square<i> class starts to change from the <i>Shape<i> class is that it also has a double sideLength attribute, for the length of the sides of the square. 
 /// Not all shapes have sides (e.g. circle), so this is a special attribute just for square. 
 ///
+/// \section GitHub
+/// - <A target=blank HREF="https://github.com/LukeleLegend/A-04/"> GitHub Repository A-04</A>
 /// \section Requirements
 /// <hr>
 /// <blockquote>
