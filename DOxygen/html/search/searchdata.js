@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: ":abcdginoprstv~",
   1: "cs",
   2: "acgops~",
-  3: "cnr",
+  3: "cnrs",
   4: "bps"
 };
 

@@ -12,6 +12,7 @@
 /// 
 /// \return Since this is a <i>constructor</i> of the square class, their is no return value
 /// \see ~Square()
+/// \see Shape()
 Square::Square() : Shape()
 {
 	sideLength = MIN_SQUARE_SIDE_LENGTH;
@@ -30,6 +31,7 @@ Square::Square() : Shape()
 /// 
 /// \return Since this is a <i>constructor</i> of the square class, their is no return value
 /// \see ~Square()
+/// \see Shape(string, string)
 Square::Square(string newColour, double newSideLength) : Shape("Square", newColour)
 {
 	if (newSideLength >= MIN_SQUARE_SIDE_LENGTH)
