@@ -8,6 +8,8 @@ using namespace std;
 
 
 /// \class Shape
+ // This below puts in a picture a square. The '\n' stops the text wrapping 
+/// <img src="shapesclass.jpeg" align="left"/>\n\n\n\n\n\n\n\n\n\n\n\n
 /// 
 /// \brief The purpose of the Shape class is to model a shape to its most abstract level, its name and its colour. So specialized child classes to inherit from here 
 /// 
