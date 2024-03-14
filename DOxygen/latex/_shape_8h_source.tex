@@ -1,0 +1,49 @@
+\doxysection{C\+:/\+Users/shoul/source/repos/\+Lukele\+Legend/\+A-\/04/\+Shape.h}
+\hypertarget{_shape_8h_source}{}\label{_shape_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ MAX\_COLOUR\_LENGTH\ 10}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ NAME\_SIZE\ 51}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_shape}{Shape}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ ATTRIBUTES\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_afef5e9426226fd7af49fe48ec16b97f3}{name}};\ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_a525db72bc0e96e0daa2c1bd0ce8cb076}{colour}};\ \ }
+\DoxyCodeLine{00027\ \ \ \ \ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ METHOD\ PROTOTYPES\ -\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_shape_a2c81e227edd2803a084c65c75e4ffd5b}{Shape}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_afef5e9426226fd7af49fe48ec16b97f3}{name}},\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_a525db72bc0e96e0daa2c1bd0ce8cb076}{colour}});\ \ \ \ \textcolor{comment}{//\ Constructor:\ The\ given\ name\ must\ be\ circle,\ square,\ or\ unknown\ and\ less\ than\ 50\ characters,\ or\ else\ name\ set\ to\ unknown.}}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_shape_a2c81e227edd2803a084c65c75e4ffd5b}{Shape}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ default\ constructor\ will\ make\ the\ name\ Unknown,\ and\ the\ colour\ undefined.\ }}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_a88554b555eae9ec283a624ef0e8d8305}{GetColour}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ returns\ copy\ of\ the\ data\ member\ colour}}
+\DoxyCodeLine{00036\ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_a7af8e23f8cce0f52e526b45b45818917}{GetName}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ returns\ copy\ of\ the\ data\ member\ name}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_shape_a59abadfdb1fa58f8afb7c9fcc9ac1ede}{ChangeColour}}(\textcolor{keywordtype}{string}\ newColour);\ \ \textcolor{comment}{//\ validates\ then\ changes\ the\ data\ member\ colour}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_shape_a0ff6cb644c5a6bd76cc665ebaaa491e1}{ChangeName}}(\textcolor{keywordtype}{string}\ newName);\ \ \ \ \ \ \textcolor{comment}{//\ validates\ then\ changes\ the\ data\ member\ name}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ PURE\ VIRTUAL\ FUNCTION\ PROTOTYPES\ -\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ Perimeter(\textcolor{keywordtype}{void})\ =\ 0;\ \ \ \textcolor{comment}{//calculates\ perimeter}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ Area(\textcolor{keywordtype}{void})\ =\ 0;\ \ \ \ \ \ \ \ \textcolor{comment}{//calculates\ area}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ OverallDimension(\textcolor{keywordtype}{void})\ =\ 0;\ \ \ \ \textcolor{comment}{//calculates\ overalldimension}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Function\ Prototype-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00050\ \ \ \ \ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+
+\end{DoxyCode}
