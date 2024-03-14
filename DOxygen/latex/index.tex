@@ -1,48 +1,7 @@
 \chapter{Shapes Project \texorpdfstring{$<$}{<}br\texorpdfstring{$>$}{>}}
 \hypertarget{index}{}\label{index}\index{Shapes Project   $<$br$>$@{Shapes Project   $<$br$>$}}
 \hypertarget{index_intro}{}\doxysection{\texorpdfstring{Program Introduction}{Program Introduction}}\label{index_intro}
-The {\bfseries{Test\+Dog}} application is meant to show how {\itshape constructors} and {\itshape destructors} are used and/or called within an OO application. As well, this program is one of the first OO applications that OOP students have seen (in terms of the source code) so it also serves as a example of {\itshape programming style} and {\itshape DOxygen commenting style})
-
-Major DOxygen features to note are\+:
-
-
-\begin{DoxyItemize}
-\item the Project / Application description and documentation found in the {\bfseries{Main Page}}
-\item how {\bfseries{classes}} are commented using DOxygen
-\item how {\bfseries{methods}} are commented using DOxygen
-\item the fact that you can still comment your source code (in C or C++ style) and have DOxygen ignore those comments while constructing your Project documentation
-\end{DoxyItemize}
-
-That list of major DOxygen features (this time in a numbered list) are\+:
-\begin{DoxyEnumerate}
-\item the Project / Application description and documentation found in the {\bfseries{Main Page}}
-\item how {\bfseries{classes}} are commented using DOxygen
-\item how {\bfseries{methods}} are commented using DOxygen
-\item the fact that you can still comment your source code (in C or C++ style) and have DOxygen ignore those comments while constructing your Project documentation
-\end{DoxyEnumerate}
-
-If your project and/or documentation requires a link to some external link -\/ you can easily include those in your DOxygen comments like this \+:
-\begin{DoxyItemize}
-\item \href{http://www.kwhumane.com/}{\texttt{ The K-\/W Humane Society}}
-\end{DoxyItemize}
-
-If using the code in this package as an example -\/ please modify the comments as appropriate for your own specific code.
-
-\DoxyHorRuler{0}
- \hypertarget{index_notes}{}\doxysection{\texorpdfstring{Special Release Notes}{Special Release Notes}}\label{index_notes}
-If you are tracking the versioning of your project software (as you would in the real world) then this is a good place to indicate (on a per version basis)\+:
-\begin{DoxyItemize}
-\item features added to the software
-\item incidents / bugs / issues fixed
-\item etc.
-\end{DoxyItemize}
-
-\DoxyHorRuler{0}
- \hypertarget{index_sampleTextFile}{}\doxysection{\texorpdfstring{Configuration File}{Configuration File}}\label{index_sampleTextFile}
-I can include the contents of TEXT files {\itshape as is} directly into the DOxygen comments 
-\begin{DoxyVerbInclude}
-\end{DoxyVerbInclude}
-
+The {\bfseries{Shapes}} Project is meant to be a firt look at inheritance in the world of OOP. Aiming to model a \doxylink{class_shape}{Shape} class at its most basic elements, to be inherited from by more specified Shapes like a \doxylink{class_circle}{Circle} or \doxylink{class_square}{Square}. It shows a simple yet intutive relationship of classes allowing for pure
 
 \DoxyHorRuler{0}
  \hypertarget{index_requirements}{}\doxysection{\texorpdfstring{Project Requirements}{Project Requirements}}\label{index_requirements}
@@ -50,51 +9,24 @@ I can include the contents of an HTML version of the {\itshape Requirements Docu
  \end{quote}
 
 
-If you also want to include some (or all) of the Project\textquotesingle{}s requirements in your DOxygen documentation -\/ you could use this space to do so.
+\DoxyHorRuler{0}
+ \hypertarget{index_version}{}\doxysection{\texorpdfstring{Current version of the Dog Project \+:}{Current version of the Dog Project \+:}}\label{index_version}
 
-{\itshape Please Note \+: The requirement(s) summary doesn\textquotesingle{}t have to be an SRS by any means ... \DoxyHorRuler{0}
- \begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]\mbox{[}optionally include text about more work to be done\mbox{]} 
-
-Give each todo item its own line\end{DoxyRefDesc}
-}
-
-{\itshape \DoxyHorRuler{0}
- \begin{DoxyRefDesc}{Bug}
-\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]\mbox{[}optionally include known bugs and limitations within the project here\mbox{]}
-\begin{DoxyItemize}
-\item BUG \+: This is known bug \#1
-\item BUG \+: This is known bug \#2
-\item ISSUE \+: Here is an known issue / limitation with the project
-\end{DoxyItemize}\end{DoxyRefDesc}
-}
-
-{\itshape \DoxyHorRuler{0}
- }\hypertarget{index_version}{}\doxysection{\texorpdfstring{{\itshape Current version of the Dog Project \+:}}{{\itshape Current version of the Dog Project \+:}}}\label{index_version}
-{\itshape  
 \begin{DoxyItemize}
 \item \begin{DoxyAuthor}{Authors}
-The {\bfseries{{\itshape Dog Expert}}} Team !! 
+The {\bfseries{{\itshape \doxylink{class_shape}{Shape} Expert}}} Team !! 
 \end{DoxyAuthor}
 
 \item \begin{DoxyVersion}{Version}
-1.\+00.\+00 
+1.\+0.\+1.\+0.\+1.\+0.\+A 
 \end{DoxyVersion}
 
 \item \begin{DoxyDate}{Date}
-2007-\/2015 
+2024-\/2024 
 \end{DoxyDate}
 
-\item \begin{DoxyPrecond}{Precondition}
-In order to use the {\itshape Dog Project} -\/ you must first start with a puppy 
-\end{DoxyPrecond}
-
-\item \begin{DoxyWarning}{Warning}
-Improper use of the {\itshape Dog Project} may result in getting {\bfseries{bitten}} 
-\end{DoxyWarning}
-
 \item \begin{DoxyCopyright}{Copyright}
-Dog-\/\+Expert Team 
+Shape-\/\+Expert Team 
 \end{DoxyCopyright}
 
-\end{DoxyItemize}}
+\end{DoxyItemize}

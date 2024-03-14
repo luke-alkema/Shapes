@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="shapes.png"/></td>
   <td id="projectalign">
    <div id="projectname">The Shapes Class Project
    </div>
@@ -112,7 +113,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a09f07ad86e16507b6db8bee35aa67962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is used when a entity outside of this class wants to change this circles radius. Ensures no invalid values are allowed.  <br /></td></tr>
 <tr class="separator:a09f07ad86e16507b6db8bee35aa67962"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ade44170d48efc91d3c35e8be4e4b5a" id="r_a9ade44170d48efc91d3c35e8be4e4b5a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ade44170d48efc91d3c35e8be4e4b5a">Show</a> (void)</td></tr>
-<tr class="memdesc:a9ade44170d48efc91d3c35e8be4e4b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to display all values related to the circle object, name, colour, radius,.  <br /></td></tr>
+<tr class="memdesc:a9ade44170d48efc91d3c35e8be4e4b5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to display all values related to the circle object, name, colour, radius.  <br /></td></tr>
 <tr class="separator:a9ade44170d48efc91d3c35e8be4e4b5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1f2e72101e2f0aa33834370f0b23bd6" id="r_ab1f2e72101e2f0aa33834370f0b23bd6"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab1f2e72101e2f0aa33834370f0b23bd6">Perimeter</a> (void)</td></tr>
 <tr class="memdesc:ab1f2e72101e2f0aa33834370f0b23bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the circles permimeter.  <br /></td></tr>
@@ -153,6 +154,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>radius</b></td></tr
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The purpose of the <a class="el" href="class_circle.html" title="The purpose of the Circle class is to extend from the Shape class and further model a Circle.">Circle</a> class is to extend from the <a class="el" href="class_shape.html" title="The purpose of the Shape class is to model a shape to its most abstract level, its name and its colou...">Shape</a> class and further model a <a class="el" href="class_circle.html" title="The purpose of the Circle class is to extend from the Shape class and further model a Circle.">Circle</a>. </p>
 <p>This class adds onto the <a class="el" href="class_shape.html" title="The purpose of the Shape class is to model a shape to its most abstract level, its name and its colou...">Shape</a> class by adding the data-member radius as well as the PI constant allowing an actual shape to be made from the inheritance relatioship between these 2 classes. <a class="el" href="class_circle.html" title="The purpose of the Circle class is to extend from the Shape class and further model a Circle.">Circle</a> class adds multiple functions that make use of Pi and the circles radius to perform calculations which can be displayed to the user.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_shape.html" title="The purpose of the Shape class is to model a shape to its most abstract level, its name and its colou...">Shape</a></dd></dl>
 <dl class="section author"><dt>Author</dt><dd><em>Dylan Shouldice-Jacobs</em> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5c39dcfd299c0ed060807cfcad0e3626" name="a5c39dcfd299c0ed060807cfcad0e3626"></a>
@@ -187,7 +189,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>radius</b></td></tr
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Since this is a <em>constructor</em> of the circle class, their is no return value </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a22d1064e650bcb96834a3056277a4185" title="Is called upon when a circle object needs to be deleted, when it loses scope inside the program.">~Circle()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a22d1064e650bcb96834a3056277a4185" title="Is called upon when a circle object needs to be deleted, when it loses scope inside the program.">~Circle()</a> </dd>
+<dd>
+<a class="el" href="class_shape.html#ad735b927c63c190803e2b9af27e4c25d" title="To create a new instance of a shape object when all parameters are present.">Shape(string, string)</a> </dd></dl>
 
 </div>
 </div>
@@ -217,7 +221,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>radius</b></td></tr
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Since this is a <em>constructor</em> of the circle class, their is no return value </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a22d1064e650bcb96834a3056277a4185" title="Is called upon when a circle object needs to be deleted, when it loses scope inside the program.">~Circle()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="#a22d1064e650bcb96834a3056277a4185" title="Is called upon when a circle object needs to be deleted, when it loses scope inside the program.">~Circle()</a> </dd>
+<dd>
+<a class="el" href="class_shape.html#a2c81e227edd2803a084c65c75e4ffd5b" title="To create a new instance of a shape object when no parameters are present.">Shape()</a> </dd></dl>
 
 </div>
 </div>
@@ -456,7 +462,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>radius</b></td></tr
 </table>
 </div><div class="memdoc">
 
-<p>Used to display all values related to the circle object, name, colour, radius,. </p>
+<p>Used to display all values related to the circle object, name, colour, radius. </p>
 <p><b>Details</b></p>
 <p>Shows each of the data-members related to a circle object, in a format that makes sense to a person</p>
 <dl class="params"><dt>Parameters</dt><dd>

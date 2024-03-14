@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['the_20dog_20project_20_3a_0',['Current version of the Dog Project :',['../index.html#version',1,'']]],
-  ['todo_20list_1',['Todo List',['../todo.html',1,'']]]
+  ['_7ecircle_0',['~Circle',['../class_circle.html#a22d1064e650bcb96834a3056277a4185',1,'Circle']]]
 ];

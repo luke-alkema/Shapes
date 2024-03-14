@@ -14,6 +14,7 @@
 /// 
 /// \return Since this is a <i>constructor</i> of the circle class, their is no return value
 /// \see ~Circle()
+/// \see Shape(string, string)
 Circle::Circle(string newColour, double newRadius) : Shape("Circle", newColour)
 {
 	if (newRadius <= MIN_RADIUS) // Radius is less then 0.00, set to 0.00, else allow input value
@@ -38,6 +39,7 @@ Circle::Circle(string newColour, double newRadius) : Shape("Circle", newColour)
 /// 
 /// \return Since this is a <i>constructor</i> of the circle class, their is no return value
 /// \see ~Circle()
+/// \see Shape()
 Circle::Circle(void) : Shape()
 {
 	radius = MIN_RADIUS; 
@@ -100,7 +102,7 @@ bool Circle::SetRadius(double newRadius)
 }
 
 
-/// \brief Used to display all values related to the circle object, name, colour, radius, 
+/// \brief Used to display all values related to the circle object, name, colour, radius
 /// \details <b>Details</b> 
 /// 
 ///  <summary>  Shows each of the data-members related to a circle object, in a format that makes sense to a person

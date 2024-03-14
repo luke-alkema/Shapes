@@ -29,7 +29,7 @@ double \mbox{\hyperlink{class_circle_a1d5a7069b34da46ae0c3a1160ef5ff29}{Get\+Rad
 bool \mbox{\hyperlink{class_circle_a09f07ad86e16507b6db8bee35aa67962}{Set\+Radius}} (double new\+Radius)
 \begin{DoxyCompactList}\small\item\em Is used when a entity outside of this class wants to change this circles radius. Ensures no invalid values are allowed. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_circle_a9ade44170d48efc91d3c35e8be4e4b5a}{Show}} (void)
-\begin{DoxyCompactList}\small\item\em Used to display all values related to the circle object, name, colour, radius,. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Used to display all values related to the circle object, name, colour, radius. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_circle_ab1f2e72101e2f0aa33834370f0b23bd6}{Perimeter}} (void)
 \begin{DoxyCompactList}\small\item\em Calculates the circles permimeter. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_circle_a05a0dc93bb1ffad54760f4546d45e76f}{Area}} (void)
@@ -64,6 +64,9 @@ The purpose of the \doxylink{class_circle}{Circle} class is to extend from the \
 
 This class adds onto the \doxylink{class_shape}{Shape} class by adding the data-\/member radius as well as the PI constant allowing an actual shape to be made from the inheritance relatioship between these 2 classes. \doxylink{class_circle}{Circle} class adds multiple functions that make use of Pi and the circles radius to perform calculations which can be displayed to the user.
 
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_shape}{Shape}
+\end{DoxySeeAlso}
 \begin{DoxyAuthor}{Author}
 {\itshape Dylan Shouldice-\/\+Jacobs} 
 \end{DoxyAuthor}
@@ -98,6 +101,8 @@ Since this is a {\itshape constructor} of the circle class, their is no return v
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
 \doxylink{class_circle_a22d1064e650bcb96834a3056277a4185}{\texorpdfstring{$\sim$}{\string~}\+Circle()} 
+
+\doxylink{class_shape_ad735b927c63c190803e2b9af27e4c25d}{Shape(string, string)} 
 \end{DoxySeeAlso}
 \Hypertarget{class_circle_a3ea668d8be6a76ab7033c43a57874a11}\label{class_circle_a3ea668d8be6a76ab7033c43a57874a11} 
 \index{Circle@{Circle}!Circle@{Circle}}
@@ -124,6 +129,8 @@ Since this is a {\itshape constructor} of the circle class, their is no return v
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
 \doxylink{class_circle_a22d1064e650bcb96834a3056277a4185}{\texorpdfstring{$\sim$}{\string~}\+Circle()} 
+
+\doxylink{class_shape_a2c81e227edd2803a084c65c75e4ffd5b}{Shape()} 
 \end{DoxySeeAlso}
 \Hypertarget{class_circle_a22d1064e650bcb96834a3056277a4185}\label{class_circle_a22d1064e650bcb96834a3056277a4185} 
 \index{Circle@{Circle}!````~Circle@{\texorpdfstring{$\sim$}{\string~}Circle}}
@@ -287,7 +294,7 @@ This method returns a boolean status code that signifies if the value was change
 
 
 
-Used to display all values related to the circle object, name, colour, radius,. 
+Used to display all values related to the circle object, name, colour, radius. 
 
 {\bfseries{Details}}
 
