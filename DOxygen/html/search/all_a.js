@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['of_20the_20dog_20project_20_3a_0',['Current version of the Dog Project :',['../index.html#version',1,'']]],
-  ['overalldimension_1',['OverallDimension',['../class_circle.html#a75932ea73a728bbfbcc09d6060297845',1,'Circle']]]
+  ['radius_0',['radius',['../class_circle.html#a5a0212ba705f57d762bd6b202e3d10ed',1,'Circle']]],
+  ['requirements_1',['Project Requirements',['../index.html#requirements',1,'']]]
 ];

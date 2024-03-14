@@ -102,7 +102,7 @@ bool Circle::SetRadius(double newRadius)
 }
 
 
-/// \brief Used to display all values related to the circle object, name, colour, radius, 
+/// \brief Used to display all values related to the circle object, name, colour, radius
 /// \details <b>Details</b> 
 /// 
 ///  <summary>  Shows each of the data-members related to a circle object, in a format that makes sense to a person
