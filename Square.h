@@ -44,7 +44,7 @@ public:
 	virtual double OverallDimension(void);   // returns the sidelength of the square
 
 
-	Square operator+(const Square& op2);
+	bool operator==(const Square& op2) const;
 	const Square& operator=(const Square& op2);
 
 };
