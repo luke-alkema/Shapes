@@ -30,16 +30,21 @@ public:
 	Square(); // default square constructor 
 	Square(string newColour, double newSideLength);  // constructor that fills the shape data member colour, and square data member sideLength
 	/*----------Destructor---------------*/
-	~Square();
+	virtual ~Square();  //Destructor of the square
 
 	/*--------------Methods--------------*/
 	double GetSideLength(void); //accessor for side length attribute
 	bool ChangeSideLength(double newSideLength); // mutator for side length attribute
+
+	double GetSideLength(void) const; // const accessor for side length attribute for overloaded operator
 
 	void Show(void); // prints out the shape's name, colour, sidelength, perimeter
 	virtual double Perimeter(void);  //returns the perimeter of the square  (cm)
 	virtual double Area(void);   //returns area of the square (cm)
 	virtual double OverallDimension(void);   // returns the sidelength of the square
 
-	
+
+	Square operator+(const Square& op2);
+	const Square& operator=(const Square& op2);
+
 };

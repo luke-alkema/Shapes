@@ -79,6 +79,21 @@ double Square::GetSideLength(void)
 	return sideLength;
 }
 
+
+/// \brief Is used when a overloaded operator needs access to this squares sideLength it will return it to them
+/// \details <b>Details</b> 
+/// 
+///  <summary>   In the case that a overloaded operator in the circle class would like to view or use the sideLength of a square, this method gives them access
+/// </summary>
+/// 
+/// \param none
+/// 
+/// \return This method returns the value of the sideLength of the square this was invoked on
+double Square::GetSideLength(void) const
+{
+	return sideLength;
+}
+
 /// \brief Is used when a entity outside of this class wants to change this squares sideLength. Ensures no invalid values are allowed
 /// \details <b>Details</b> 
 /// 
@@ -97,7 +112,6 @@ bool Square::ChangeSideLength(double newSideLength)
 	}
 	return false;
 }
-
 
 
 /// \brief Used to display all values related to the square object: name, colour, sideLength 
@@ -166,5 +180,12 @@ double Square::Area(void)
 double Square::OverallDimension(void)
 {
 	return sideLength;
+}
+
+const Square& Square::operator=(const Square& op2)
+{
+	this->sideLength = op2.sideLength;
+	this->ChangeColour(op2.GetColour());
+	return *this;
 }
 

@@ -78,6 +78,13 @@ double Circle::GetRadius(void)
 }
 
 
+
+double Circle::GetRadius(void) const
+{
+	return radius;
+}
+
+
 /// \brief Is used when a entity outside of this class wants to change this circles radius. Ensures no invalid values are allowed
 /// \details <b>Details</b> 
 /// 
@@ -174,4 +181,19 @@ double Circle::OverallDimension(void)
 {
 	return radius * 2;
 }
+
+const Circle& Circle::operator=(const Circle& rhs)
+{
+	this->radius = rhs.radius;
+	this->ChangeColour(rhs.GetColour());
+
+	return *this;
+}
+
+const Circle& Circle::operator==(const Circle& rhs)
+{
+	
+}
+
+
 
