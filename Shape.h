@@ -4,6 +4,10 @@
 #define MAX_COLOUR_LENGTH 10
 #define NAME_SIZE 51
 
+#define EQUAL 1
+#define NOT_EQUAL 0
+
+
 using namespace std;
 
 
@@ -44,6 +48,8 @@ public:
 
 	// "const" accessors for the colour attribute of the shape
 	string GetColour(void) const;
+
+	int areAlmostEqual(double thisValue, double otherValue); // checks if two doubles are almost equal
 
 	/* ---------- PURE VIRTUAL FUNCTION PROTOTYPES --------- */
 
