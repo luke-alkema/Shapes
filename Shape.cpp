@@ -145,8 +145,5 @@ bool Shape::ChangeName(string newName)
 
 string Shape::GetColour(void) const
 {
-	return this->colour;
+	return colour;
 }
-
-
-
