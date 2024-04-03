@@ -13,7 +13,7 @@
 /// \return Since this is a <i>constructor</i> of the square class, their is no return value
 /// \see ~Square()
 /// \see Shape()
-Square::Square() : Shape()
+Square::Square() : Shape("Square", "undefined")
 {
 	sideLength = MIN_SQUARE_SIDE_LENGTH;
 }

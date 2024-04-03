@@ -11,57 +11,45 @@
 #include "Square.h"
 
 #define ERROR -1
-#define MAX_USER_INPUT 100
 
 
 int main(void)
 {
-	char colourBuffer[MAX_USER_INPUT] = "";
-	char dimensionBuffer[MAX_USER_INPUT] = "";
+	Circle round1("red", 5.5);
+	Circle round2("blue", 10.5);
+	Circle playARound;
 
-	printf("\n----Creating a Square----\n");
+	Square square1("orange", 5);
+	Square square2("purple", 12);
+	Square playASquare;
 
-	printf("Enter Squares Colour >> ");
-	fgets(colourBuffer, MAX_USER_INPUT, stdin);
-	colourBuffer[strcspn(colourBuffer, "\n")] = 0;
+	round1.Show();
+	round2.Show();
+	playARound.Show();
+	square1.Show();
+	square2.Show();
+	playASquare.Show();
 
-	char sideLengthBuffer[MAX_USER_INPUT] = "";
-	printf("Enter Squares Side Length >> ");
-	fgets(dimensionBuffer, MAX_USER_INPUT, stdin);
-	double sideLength = atof(dimensionBuffer);
+	playARound = round1 + round2;
+	playASquare = square2 + square1;
+	playARound.Show();
+	playASquare.Show();
 
-	Square* mySquare = new Square(colourBuffer, sideLength);
-	if (mySquare == NULL)
+	playARound = round1 * round2;
+	playASquare = square2 * square1;
+	playARound.Show();
+	playASquare.Show();
+
+	playARound = round1;
+
+	if (playARound == round1)
 	{
-		printf("Not enought memory\n");
-		return ERROR;
+		printf("Hurray !!\n");
 	}
-	mySquare->Show();
-
-	
-	printf("\n----Creating a Circle----\n");
-
-	printf("Input Circle's colour >> ");
-	fgets(colourBuffer, MAX_USER_INPUT, stdin);
-	colourBuffer[strcspn(colourBuffer, "\n")] = 0;
-
-	printf("Input Circle's radius >> ");
-	fgets(dimensionBuffer, MAX_USER_INPUT, stdin);
-	dimensionBuffer[strcspn(dimensionBuffer, "\n")] = 0;
-	double radius = atof(dimensionBuffer);
-
-	Circle* myCircle = new Circle(colourBuffer, radius);
-  if (myCircle == NULL)
+	else
 	{
-		printf("Not enough memory\n");
-		return ERROR;
+		printf("Awww !!\n");
 	}
-  
-  myCircle->Show();
-  
-	delete myCircle;
-	delete mySquare;
-
 	return 0;
 }
 
