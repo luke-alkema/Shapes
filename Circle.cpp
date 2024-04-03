@@ -190,10 +190,9 @@ const Circle& Circle::operator=(const Circle& rhs)
 	return *this;
 }
 
-const Circle& Circle::operator==(const Circle& rhs)
+bool Circle::operator==(const Circle& rhs) const
 {
-	
+	//  Checks if the colours are equal using == which will result in 1 or 0, then calls upon the areAlmostEqual to check if radius are equal properly.
+	//  Also resulting in a 1 or 0
+	return (this->GetColour() == rhs.GetColour()) && areAlmostEqual(this->radius, rhs.radius); 
 }
-
-
-

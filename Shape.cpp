@@ -148,7 +148,7 @@ string Shape::GetColour(void) const
 	return colour;
 }
 
-int Shape::areAlmostEqual(double thisValue, double otherValue)
+int Shape::areAlmostEqual(double thisValue, double otherValue) const
 {
 	double tolerance = 0.0001; // If the difference is less than 0.0001, the two values are considered equal
 	if ((((otherValue - tolerance) < thisValue) && (thisValue < (otherValue + tolerance))) == 0)

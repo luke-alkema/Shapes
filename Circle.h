@@ -48,7 +48,7 @@ class Circle : public Shape
 		virtual double OverallDimension(void); // Returns the diameter of the circle
 
 		const Circle& operator=(const Circle& rhs); // Overloaded assignment operator
-		const Circle& operator==(const Circle& rhs);// Overloaded equality operator
+		bool operator==(const Circle& rhs) const;// Overloaded equality operator
 
 
 };

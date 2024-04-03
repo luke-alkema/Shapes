@@ -49,7 +49,7 @@ public:
 	// "const" accessors for the colour attribute of the shape
 	string GetColour(void) const;
 
-	int areAlmostEqual(double thisValue, double otherValue); // checks if two doubles are almost equal
+	int areAlmostEqual(double thisValue, double otherValue) const; // checks if two doubles are almost equal
 
 	/* ---------- PURE VIRTUAL FUNCTION PROTOTYPES --------- */
 
