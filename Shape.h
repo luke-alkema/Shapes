@@ -42,6 +42,9 @@ public:
 
 	bool ChangeName(string newName);      // validates then changes the data member name
 
+	// "const" accessors for the colour attribute of the shape
+	string GetColour(void) const;
+
 	/* ---------- PURE VIRTUAL FUNCTION PROTOTYPES --------- */
 
 /// \brief pure virutal method to be implemented in child-classes, to calculate the respective shapes permimeter
