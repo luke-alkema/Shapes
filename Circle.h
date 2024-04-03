@@ -39,6 +39,7 @@ class Circle : public Shape
 		// Methods
 
 		double GetRadius(void);			  // Gets the radius of a circle
+		double GetRadius(void) const; // Gets the radius of a circle
 		bool SetRadius(double newRadius); // Sets the radius of a circle, if it is an allowable value
 
 		virtual void Show(void);	      // Shows the current data-members and values of the circle
