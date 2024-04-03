@@ -182,9 +182,29 @@ double Circle::OverallDimension(void)
 	return radius * 2;
 }
 
+Circle Circle::operator+(const Circle& rhs)
+{
+	Circle temp;
+
+	temp.radius = this->radius + rhs.GetRadius();
+	temp.ChangeColour(this->GetColour());
+
+	return *this;
+}
+
+Circle Circle::operator*(const Circle& rhs)
+{
+	Circle temp;
+
+	temp.radius = this->radius * rhs.GetRadius();
+	temp.ChangeColour(rhs.GetColour());
+
+	return *this;
+}
+
 const Circle& Circle::operator=(const Circle& rhs)
 {
-	this->radius = rhs.radius;
+	this->radius = rhs.GetRadius();
 	this->ChangeColour(rhs.GetColour());
 
 	return *this;
