@@ -47,4 +47,6 @@ public:
 	bool operator==(const Square& op2) const;
 	const Square& operator=(const Square& op2);
 
+	Square operator+(const Square& op2);
+	Square operator*(const Square& op2);
 };
