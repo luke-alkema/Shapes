@@ -182,3 +182,18 @@ double Circle::OverallDimension(void)
 	return radius * 2;
 }
 
+const Circle& Circle::operator=(const Circle& rhs)
+{
+	this->radius = rhs.radius;
+	this->ChangeColour(rhs.GetColour());
+
+	return *this;
+}
+
+const Circle& Circle::operator==(const Circle& rhs)
+{
+	
+}
+
+
+
