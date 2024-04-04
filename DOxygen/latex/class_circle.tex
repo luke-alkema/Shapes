@@ -26,6 +26,9 @@ virtual \mbox{\hyperlink{class_circle_a22d1064e650bcb96834a3056277a4185}{\texorp
 \begin{DoxyCompactList}\small\item\em Is called upon when a circle object needs to be deleted, when it loses scope inside the program. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_circle_a1d5a7069b34da46ae0c3a1160ef5ff29}{Get\+Radius}} (void)
 \begin{DoxyCompactList}\small\item\em Is used when a part of the program needs access to this circles radius it will return it to them. \end{DoxyCompactList}\item 
+\Hypertarget{class_circle_aa115244e6c4cb890eda2ba4f76b6d684}\label{class_circle_aa115244e6c4cb890eda2ba4f76b6d684} 
+double {\bfseries Get\+Radius} (void) const
+\item 
 bool \mbox{\hyperlink{class_circle_a09f07ad86e16507b6db8bee35aa67962}{Set\+Radius}} (double new\+Radius)
 \begin{DoxyCompactList}\small\item\em Is used when a entity outside of this class wants to change this circles radius. Ensures no invalid values are allowed. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_circle_a9ade44170d48efc91d3c35e8be4e4b5a}{Show}} (void)
@@ -35,7 +38,15 @@ virtual double \mbox{\hyperlink{class_circle_ab1f2e72101e2f0aa33834370f0b23bd6}{
 virtual double \mbox{\hyperlink{class_circle_a05a0dc93bb1ffad54760f4546d45e76f}{Area}} (void)
 \begin{DoxyCompactList}\small\item\em Calcultes the circles area. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_circle_a75932ea73a728bbfbcc09d6060297845}{Overall\+Dimension}} (void)
-\begin{DoxyCompactList}\small\item\em Calculates the circle diameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calculates the circle diameter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_circle}{Circle}} \mbox{\hyperlink{class_circle_ad4d18d999d84dc24c52acac674cece0f}{operator+}} (const \mbox{\hyperlink{class_circle}{Circle}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Overloaded addition operator for the circle class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_circle}{Circle}} \mbox{\hyperlink{class_circle_ac7c386d70a1391e423afd5a2b16aebe2}{operator\texorpdfstring{$\ast$}{*}}} (const \mbox{\hyperlink{class_circle}{Circle}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Overloaded multiplication operator for the circle class. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_circle}{Circle}} \& \mbox{\hyperlink{class_circle_ab41aae66320e45912a69f8a641201e3b}{operator=}} (const \mbox{\hyperlink{class_circle}{Circle}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Overloaded assignment operator for the circle class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_circle_ad89ad91711a6cd4da0da6b8a03beaaa0}{operator==}} (const \mbox{\hyperlink{class_circle}{Circle}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Overloaded equality operator for the circle class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_shape}{Shape}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,7 +61,11 @@ string \mbox{\hyperlink{class_shape_a7af8e23f8cce0f52e526b45b45818917}{Get\+Name
 bool \mbox{\hyperlink{class_shape_a59abadfdb1fa58f8afb7c9fcc9ac1ede}{Change\+Colour}} (string new\+Colour)
 \begin{DoxyCompactList}\small\item\em Is used to change the colour of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_shape_a0ff6cb644c5a6bd76cc665ebaaa491e1}{Change\+Name}} (string new\+Name)
-\begin{DoxyCompactList}\small\item\em Is used to change the name of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Is used to change the name of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_shape_abb2339563a60f8c94e72f3fed923c875}{Get\+Colour}} (void) const
+\begin{DoxyCompactList}\small\item\em Is used to access the colour of a shape object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_shape_aa32c5a06428a3cd2215a2106ceef8266}{are\+Almost\+Equal}} (double this\+Value, double other\+Value) const
+\begin{DoxyCompactList}\small\item\em Is used to check if two floating point numbers are almost equal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -223,6 +238,96 @@ In the case that a entity foriegn to the circle class would like to view or use 
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 This method returns the value of the radius of the circle this was invoked on 
+\end{DoxyReturn}
+\Hypertarget{class_circle_ac7c386d70a1391e423afd5a2b16aebe2}\label{class_circle_ac7c386d70a1391e423afd5a2b16aebe2} 
+\index{Circle@{Circle}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_circle}{Circle}} Circle\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_circle}{Circle}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Overloaded multiplication operator for the circle class. 
+
+{\bfseries{Details}}
+
+Creates a new circle object to hold the resultant circle. New radius is the product of the two \textquotesingle{}circle\textquotesingle{}s radii. While the colour of the new circle is set to the RHS circle\textquotesingle{}s colour.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & -\/ {\bfseries{const \doxylink{class_circle}{Circle}\&}} \+: The circle object that is being multiplied with the LHS circle, also passed as a constant by reference ensuring it is not changed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the new circle object that is the product of lhs \texorpdfstring{$\ast$}{*} rhs. ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_circle_ad4d18d999d84dc24c52acac674cece0f}\label{class_circle_ad4d18d999d84dc24c52acac674cece0f} 
+\index{Circle@{Circle}!operator+@{operator+}}
+\index{operator+@{operator+}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_circle}{Circle}} Circle\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_circle}{Circle}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Overloaded addition operator for the circle class. 
+
+{\bfseries{Details}}
+
+Creates a new circle object to hold the resultant circle. New radius is the sum of the two circle\textquotesingle{}s radii. While the colour of the new circle is set to the LHS circle\textquotesingle{}s colour.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & -\/ {\bfseries{const \doxylink{class_circle}{Circle}\&}} \+: The circle object that is being added to the LHS circle, also passed as a constant by reference ensuring it is not changed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the new circle object that is the sum of lhs + rhs. ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_circle_ab41aae66320e45912a69f8a641201e3b}\label{class_circle_ab41aae66320e45912a69f8a641201e3b} 
+\index{Circle@{Circle}!operator=@{operator=}}
+\index{operator=@{operator=}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_circle}{Circle}} \& Circle\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_circle}{Circle}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Overloaded assignment operator for the circle class. 
+
+{\bfseries{Details}}
+
+The circle object that this operator was called upon (LHS) will gain the values of the RHS circle. Which is the radius and the colour
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & -\/ {\bfseries{const \doxylink{class_circle}{Circle}\&}} \+: The circle object that has the values to be put inside the LHS operand, also passed as a constant by reference ensuring it is not changed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the lhs circle object that has been updated with the values of the rhs circle object. 
+\end{DoxyReturn}
+\Hypertarget{class_circle_ad89ad91711a6cd4da0da6b8a03beaaa0}\label{class_circle_ad89ad91711a6cd4da0da6b8a03beaaa0} 
+\index{Circle@{Circle}!operator==@{operator==}}
+\index{operator==@{operator==}!Circle@{Circle}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Circle\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_circle}{Circle}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Overloaded equality operator for the circle class. 
+
+{\bfseries{Details}}
+
+This will test the values of the LHS circle object and the RHS circle object to see if they are equal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & -\/ {\bfseries{const \doxylink{class_circle}{Circle}\&}} \+: The circle object that has the values to be tested against the LHS values, also passed as a constant by reference ensuring it is not changed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true or false depending on if the two circles are equal or not. 
 \end{DoxyReturn}
 \Hypertarget{class_circle_a75932ea73a728bbfbcc09d6060297845}\label{class_circle_a75932ea73a728bbfbcc09d6060297845} 
 \index{Circle@{Circle}!OverallDimension@{OverallDimension}}

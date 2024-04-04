@@ -103,7 +103,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab99fbb5ea8ba88349120e2f4f9a18b8a" id="r_ab99fbb5ea8ba88349120e2f4f9a18b8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab99fbb5ea8ba88349120e2f4f9a18b8a">Square</a> (string newColour, double newSideLength)</td></tr>
 <tr class="memdesc:ab99fbb5ea8ba88349120e2f4f9a18b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">To create a new instance of a square object when all parameters are present(colour, sidelength)  <br /></td></tr>
 <tr class="separator:ab99fbb5ea8ba88349120e2f4f9a18b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90af7ce1060cff7b717ceddb333846b8" id="r_a90af7ce1060cff7b717ceddb333846b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90af7ce1060cff7b717ceddb333846b8">~Square</a> ()</td></tr>
+<tr class="memitem:a90af7ce1060cff7b717ceddb333846b8" id="r_a90af7ce1060cff7b717ceddb333846b8"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90af7ce1060cff7b717ceddb333846b8">~Square</a> ()</td></tr>
 <tr class="memdesc:a90af7ce1060cff7b717ceddb333846b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is called upon when a square object needs to be deleted, when it loses scope inside the program.  <br /></td></tr>
 <tr class="separator:a90af7ce1060cff7b717ceddb333846b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accda78726f7986e834e13838bdc68435" id="r_accda78726f7986e834e13838bdc68435"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accda78726f7986e834e13838bdc68435">GetSideLength</a> (void)</td></tr>
@@ -112,6 +112,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a52ab280f0bf6d510d41488a1e5d3e0df" id="r_a52ab280f0bf6d510d41488a1e5d3e0df"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a52ab280f0bf6d510d41488a1e5d3e0df">ChangeSideLength</a> (double newSideLength)</td></tr>
 <tr class="memdesc:a52ab280f0bf6d510d41488a1e5d3e0df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is used when a entity outside of this class wants to change this squares sideLength. Ensures no invalid values are allowed.  <br /></td></tr>
 <tr class="separator:a52ab280f0bf6d510d41488a1e5d3e0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad680efe2f3aa18daf1bbde8797728e0" id="r_aad680efe2f3aa18daf1bbde8797728e0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad680efe2f3aa18daf1bbde8797728e0">GetSideLength</a> (void) const</td></tr>
+<tr class="memdesc:aad680efe2f3aa18daf1bbde8797728e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is used when a overloaded operator needs access to this squares sideLength it will return it to them.  <br /></td></tr>
+<tr class="separator:aad680efe2f3aa18daf1bbde8797728e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a7e3a73cfbe9045d8a27dd8f738fda9" id="r_a2a7e3a73cfbe9045d8a27dd8f738fda9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a7e3a73cfbe9045d8a27dd8f738fda9">Show</a> (void)</td></tr>
 <tr class="memdesc:a2a7e3a73cfbe9045d8a27dd8f738fda9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to display all values related to the square object: name, colour, sideLength.  <br /></td></tr>
 <tr class="separator:a2a7e3a73cfbe9045d8a27dd8f738fda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,6 +127,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1c5ae76ba87ed24e83fee990131abe5b" id="r_a1c5ae76ba87ed24e83fee990131abe5b"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c5ae76ba87ed24e83fee990131abe5b">OverallDimension</a> (void)</td></tr>
 <tr class="memdesc:a1c5ae76ba87ed24e83fee990131abe5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the squares sideLength.  <br /></td></tr>
 <tr class="separator:a1c5ae76ba87ed24e83fee990131abe5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b81c4b28d3a66de45349f631de16fc" id="r_a28b81c4b28d3a66de45349f631de16fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28b81c4b28d3a66de45349f631de16fc">operator==</a> (const <a class="el" href="class_square.html">Square</a> &amp;op2) const</td></tr>
+<tr class="memdesc:a28b81c4b28d3a66de45349f631de16fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded equality operator for the square class.  <br /></td></tr>
+<tr class="separator:a28b81c4b28d3a66de45349f631de16fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b3d44eb29782413e4cf16bc39267951" id="r_a5b3d44eb29782413e4cf16bc39267951"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_square.html">Square</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b3d44eb29782413e4cf16bc39267951">operator=</a> (const <a class="el" href="class_square.html">Square</a> &amp;op2)</td></tr>
+<tr class="memdesc:a5b3d44eb29782413e4cf16bc39267951"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded assignment operator for the square class.  <br /></td></tr>
+<tr class="separator:a5b3d44eb29782413e4cf16bc39267951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44f4c916effc730973eb43bb6e5b306c" id="r_a44f4c916effc730973eb43bb6e5b306c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_square.html">Square</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44f4c916effc730973eb43bb6e5b306c">operator+</a> (const <a class="el" href="class_square.html">Square</a> &amp;op2)</td></tr>
+<tr class="memdesc:a44f4c916effc730973eb43bb6e5b306c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded addition operator for the square class.  <br /></td></tr>
+<tr class="separator:a44f4c916effc730973eb43bb6e5b306c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d10de13a1929e8b2361a6fdf8720973" id="r_a4d10de13a1929e8b2361a6fdf8720973"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_square.html">Square</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d10de13a1929e8b2361a6fdf8720973">operator*</a> (const <a class="el" href="class_square.html">Square</a> &amp;op2)</td></tr>
+<tr class="memdesc:a4d10de13a1929e8b2361a6fdf8720973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded multiplication operator for the square class.  <br /></td></tr>
+<tr class="separator:a4d10de13a1929e8b2361a6fdf8720973"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_shape"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_shape')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_shape.html">Shape</a></td></tr>
 <tr class="memitem:ad735b927c63c190803e2b9af27e4c25d inherit pub_methods_class_shape" id="r_ad735b927c63c190803e2b9af27e4c25d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shape.html#ad735b927c63c190803e2b9af27e4c25d">Shape</a> (string <a class="el" href="class_shape.html#afef5e9426226fd7af49fe48ec16b97f3">name</a>, string <a class="el" href="class_shape.html#a525db72bc0e96e0daa2c1bd0ce8cb076">colour</a>)</td></tr>
 <tr class="memdesc:ad735b927c63c190803e2b9af27e4c25d inherit pub_methods_class_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">To create a new instance of a shape object when all parameters are present.  <br /></td></tr>
@@ -143,6 +158,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0ff6cb644c5a6bd76cc665ebaaa491e1 inherit pub_methods_class_shape" id="r_a0ff6cb644c5a6bd76cc665ebaaa491e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shape.html#a0ff6cb644c5a6bd76cc665ebaaa491e1">ChangeName</a> (string newName)</td></tr>
 <tr class="memdesc:a0ff6cb644c5a6bd76cc665ebaaa491e1 inherit pub_methods_class_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is used to change the name of a <a class="el" href="class_shape.html" title="The purpose of the Shape class is to model a shape to its most abstract level, its name and its colou...">Shape</a> object, safely.  <br /></td></tr>
 <tr class="separator:a0ff6cb644c5a6bd76cc665ebaaa491e1 inherit pub_methods_class_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb2339563a60f8c94e72f3fed923c875 inherit pub_methods_class_shape" id="r_abb2339563a60f8c94e72f3fed923c875"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shape.html#abb2339563a60f8c94e72f3fed923c875">GetColour</a> (void) const</td></tr>
+<tr class="memdesc:abb2339563a60f8c94e72f3fed923c875 inherit pub_methods_class_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is used to access the colour of a shape object.  <br /></td></tr>
+<tr class="separator:abb2339563a60f8c94e72f3fed923c875 inherit pub_methods_class_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa32c5a06428a3cd2215a2106ceef8266 inherit pub_methods_class_shape" id="r_aa32c5a06428a3cd2215a2106ceef8266"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shape.html#aa32c5a06428a3cd2215a2106ceef8266">areAlmostEqual</a> (double thisValue, double otherValue) const</td></tr>
+<tr class="memdesc:aa32c5a06428a3cd2215a2106ceef8266 inherit pub_methods_class_shape"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is used to check if two floating point numbers are almost equal.  <br /></td></tr>
+<tr class="separator:aa32c5a06428a3cd2215a2106ceef8266 inherit pub_methods_class_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -244,6 +265,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>sideLength</b></td>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Square::~Square </td>
@@ -252,6 +276,11 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>sideLength</b></td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Is called upon when a square object needs to be deleted, when it loses scope inside the program. </p>
@@ -339,7 +368,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>sideLength</b></td>
 </div>
 </div>
 <a id="accda78726f7986e834e13838bdc68435" name="accda78726f7986e834e13838bdc68435"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#accda78726f7986e834e13838bdc68435">&#9670;&#160;</a></span>GetSideLength()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#accda78726f7986e834e13838bdc68435">&#9670;&#160;</a></span>GetSideLength() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,6 +392,148 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>sideLength</b></td>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This method returns the value of the sideLength of the square this was invoked on </dd></dl>
+
+</div>
+</div>
+<a id="aad680efe2f3aa18daf1bbde8797728e0" name="aad680efe2f3aa18daf1bbde8797728e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad680efe2f3aa18daf1bbde8797728e0">&#9670;&#160;</a></span>GetSideLength() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Square::GetSideLength </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Is used when a overloaded operator needs access to this squares sideLength it will return it to them. </p>
+<p><b>Details</b></p>
+<p>In the case that a overloaded operator in the circle class would like to view or use the sideLength of a square, this method gives them access</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>This method returns the value of the sideLength of the square this was invoked on </dd></dl>
+
+</div>
+</div>
+<a id="a4d10de13a1929e8b2361a6fdf8720973" name="a4d10de13a1929e8b2361a6fdf8720973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d10de13a1929e8b2361a6fdf8720973">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_square.html">Square</a> Square::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_square.html">Square</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>op2</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloaded multiplication operator for the square class. </p>
+<p><b>Details</b></p>
+<p>Creates a new square object to hold the resultant square. The new sidelength is the product of the two 'squares's sidelengths. While the colour of the new square is set to the RHS squares's colour.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>- <b>const <a class="el" href="class_square.html" title="The purpose of the Square class is to extend from the Shape class and further model a Square.">Square</a>&amp;</b> : The square object that is being multiplied with the LHS square, also passed as a constant by reference ensuring it is not changed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns the new square object that is the product of lhs * rhs. <br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="a44f4c916effc730973eb43bb6e5b306c" name="a44f4c916effc730973eb43bb6e5b306c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44f4c916effc730973eb43bb6e5b306c">&#9670;&#160;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_square.html">Square</a> Square::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_square.html">Square</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>op2</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloaded addition operator for the square class. </p>
+<p><b>Details</b></p>
+<p>Creates a new square object to hold the resultant square. The new sidelength is the sum of the two square's sidelengths. While the colour of the new square is set to the LHS square's colour.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>- <b>const <a class="el" href="class_square.html" title="The purpose of the Square class is to extend from the Shape class and further model a Square.">Square</a>&amp;</b> : The square object that is being added to the LHS square, also passed as a constant reference ensuring it is not changed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns the new square object that is the sum of lhs + rhs. <br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="a5b3d44eb29782413e4cf16bc39267951" name="a5b3d44eb29782413e4cf16bc39267951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b3d44eb29782413e4cf16bc39267951">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_square.html">Square</a> &amp; Square::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_square.html">Square</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>op2</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloaded assignment operator for the square class. </p>
+<p><b>Details</b></p>
+<p>The square object that this operator was called upon (LHS) will gain the values of the RHS square. Which is the sidelength and the colour</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>- <b>const <a class="el" href="class_square.html" title="The purpose of the Square class is to extend from the Shape class and further model a Square.">Square</a>&amp;</b> : The square object that has the values to be put inside the LHS operand, also passed as a constant by reference ensuring it is not changed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns the lhs square object that has been updated with the values of the rhs square object. </dd></dl>
+
+</div>
+</div>
+<a id="a28b81c4b28d3a66de45349f631de16fc" name="a28b81c4b28d3a66de45349f631de16fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28b81c4b28d3a66de45349f631de16fc">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Square::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_square.html">Square</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>op2</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Overloaded equality operator for the square class. </p>
+<p><b>Details</b></p>
+<p>This will test the values of the LHS square object and the RHS square object to see if they are equal.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>- <b>const <a class="el" href="class_square.html" title="The purpose of the Square class is to extend from the Shape class and further model a Square.">Square</a>&amp;</b> : The square object that has the values to be tested against the LHS values, also passed as a constant reference ensuring it is not changed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns true or false depending on if the two squares are equal or not. </dd></dl>
 
 </div>
 </div>

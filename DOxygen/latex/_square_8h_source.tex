@@ -22,18 +22,25 @@
 \DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_square_a3dc7ff9aefc2725172b5d3153973d243}{Square}}();\ \textcolor{comment}{//\ default\ square\ constructor\ }}
 \DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_square_a3dc7ff9aefc2725172b5d3153973d243}{Square}}(\textcolor{keywordtype}{string}\ newColour,\ \textcolor{keywordtype}{double}\ newSideLength);\ \ \textcolor{comment}{//\ constructor\ that\ fills\ the\ shape\ data\ member\ colour,\ and\ square\ data\ member\ sideLength}}
 \DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Destructor-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_square_a90af7ce1060cff7b717ceddb333846b8}{\string~Square}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_square_a90af7ce1060cff7b717ceddb333846b8}{\string~Square}}();\ \ \textcolor{comment}{//Destructor\ of\ the\ square}}
 \DoxyCodeLine{00034\ }
 \DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Methods-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
 \DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_square_accda78726f7986e834e13838bdc68435}{GetSideLength}}(\textcolor{keywordtype}{void});\ \textcolor{comment}{//accessor\ for\ side\ length\ attribute}}
 \DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_square_a52ab280f0bf6d510d41488a1e5d3e0df}{ChangeSideLength}}(\textcolor{keywordtype}{double}\ newSideLength);\ \textcolor{comment}{//\ mutator\ for\ side\ length\ attribute}}
 \DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_square_a2a7e3a73cfbe9045d8a27dd8f738fda9}{Show}}(\textcolor{keywordtype}{void});\ \textcolor{comment}{//\ prints\ out\ the\ shape's\ name,\ colour,\ sidelength,\ perimeter}}
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_square_ae046b540c8544e422f628b662f1e86e3}{Perimeter}}(\textcolor{keywordtype}{void});\ \ \textcolor{comment}{//returns\ the\ perimeter\ of\ the\ square\ \ (cm)}}
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_square_a0b19881092536de79a7a2faa504a7449}{Area}}(\textcolor{keywordtype}{void});\ \ \ \textcolor{comment}{//returns\ area\ of\ the\ square\ (cm)}}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_square_a1c5ae76ba87ed24e83fee990131abe5b}{OverallDimension}}(\textcolor{keywordtype}{void});\ \ \ \textcolor{comment}{//\ returns\ the\ sidelength\ of\ the\ square}}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ \ \ \ \ }
-\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_square_accda78726f7986e834e13838bdc68435}{GetSideLength}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ const\ accessor\ for\ side\ length\ attribute\ for\ overloaded\ operator}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_square_a2a7e3a73cfbe9045d8a27dd8f738fda9}{Show}}(\textcolor{keywordtype}{void});\ \textcolor{comment}{//\ prints\ out\ the\ shape's\ name,\ colour,\ sidelength,\ perimeter}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_square_ae046b540c8544e422f628b662f1e86e3}{Perimeter}}(\textcolor{keywordtype}{void});\ \ \textcolor{comment}{//returns\ the\ perimeter\ of\ the\ square\ \ (cm)}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_square_a0b19881092536de79a7a2faa504a7449}{Area}}(\textcolor{keywordtype}{void});\ \ \ \textcolor{comment}{//returns\ area\ of\ the\ square\ (cm)}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_square_a1c5ae76ba87ed24e83fee990131abe5b}{OverallDimension}}(\textcolor{keywordtype}{void});\ \ \ \textcolor{comment}{//\ returns\ the\ sidelength\ of\ the\ square}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_square_a28b81c4b28d3a66de45349f631de16fc}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_square}{Square}}\&\ op2)\ \textcolor{keyword}{const};\ \ \textcolor{comment}{//overloaded\ equality\ operator}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_square}{Square}}\&\ \mbox{\hyperlink{class_square_a5b3d44eb29782413e4cf16bc39267951}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_square}{Square}}\&\ op2);\ \textcolor{comment}{//overloaded\ assignment\ operator}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_square}{Square}}\ \mbox{\hyperlink{class_square_a44f4c916effc730973eb43bb6e5b306c}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_square}{Square}}\&\ op2);\ \textcolor{comment}{//overloaded\ addition\ operator}}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_square}{Square}}\ \mbox{\hyperlink{class_square_a4d10de13a1929e8b2361a6fdf8720973}{operator*}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_square}{Square}}\&\ op2);\ \textcolor{comment}{//overloaded\ multiplication\ operator}}
+\DoxyCodeLine{00052\ \};}
 
 \end{DoxyCode}

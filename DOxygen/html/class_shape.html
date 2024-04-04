@@ -116,6 +116,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0ff6cb644c5a6bd76cc665ebaaa491e1" id="r_a0ff6cb644c5a6bd76cc665ebaaa491e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0ff6cb644c5a6bd76cc665ebaaa491e1">ChangeName</a> (string newName)</td></tr>
 <tr class="memdesc:a0ff6cb644c5a6bd76cc665ebaaa491e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is used to change the name of a <a class="el" href="class_shape.html" title="The purpose of the Shape class is to model a shape to its most abstract level, its name and its colou...">Shape</a> object, safely.  <br /></td></tr>
 <tr class="separator:a0ff6cb644c5a6bd76cc665ebaaa491e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb2339563a60f8c94e72f3fed923c875" id="r_abb2339563a60f8c94e72f3fed923c875"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb2339563a60f8c94e72f3fed923c875">GetColour</a> (void) const</td></tr>
+<tr class="memdesc:abb2339563a60f8c94e72f3fed923c875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is used to access the colour of a shape object.  <br /></td></tr>
+<tr class="separator:abb2339563a60f8c94e72f3fed923c875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18c4ee2257909bf4f84ea4e4b09d575e" id="r_a18c4ee2257909bf4f84ea4e4b09d575e"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18c4ee2257909bf4f84ea4e4b09d575e">Perimeter</a> (void)=0</td></tr>
 <tr class="memdesc:a18c4ee2257909bf4f84ea4e4b09d575e"><td class="mdescLeft">&#160;</td><td class="mdescRight">pure virutal method to be implemented in child-classes, to calculate the respective shapes permimeter  <br /></td></tr>
 <tr class="separator:a18c4ee2257909bf4f84ea4e4b09d575e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,6 +128,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a75a0cb162699095d35fc86414f2d84fd" id="r_a75a0cb162699095d35fc86414f2d84fd"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75a0cb162699095d35fc86414f2d84fd">OverallDimension</a> (void)=0</td></tr>
 <tr class="memdesc:a75a0cb162699095d35fc86414f2d84fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">pure virutal method to be implemented in child-classes, to calculate the respective shapes trait dimension  <br /></td></tr>
 <tr class="separator:a75a0cb162699095d35fc86414f2d84fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa32c5a06428a3cd2215a2106ceef8266" id="r_aa32c5a06428a3cd2215a2106ceef8266"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa32c5a06428a3cd2215a2106ceef8266">areAlmostEqual</a> (double thisValue, double otherValue) const</td></tr>
+<tr class="memdesc:aa32c5a06428a3cd2215a2106ceef8266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is used to check if two floating point numbers are almost equal.  <br /></td></tr>
+<tr class="separator:aa32c5a06428a3cd2215a2106ceef8266"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -154,7 +160,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>colour</b></td></tr
  </p>
 <p>The shape class holds the general properties of any shape. The purpose of this shape class is to allow child classes to inherit from it, of which are acual specific shapes.<br  />
  The shape class is in charge of initialising the colour and name of the shape, and allow users to change and /or access the data members name and colour.<br  />
- The class also has 3 pure virtual functions so that child classes can use the concept of them. They must be overridden of course since the methods will change given different shapes.</p>
+ The class also has 3 pure virtual functions so that child classes can use the concept of them. They must be overridden of course since the methods will change given different shapes. There is also a function for comparing two floats to check if they are almost equal, ignoring the last couple decimal points. This will be used in the child classes.</p>
 <dl class="section author"><dt>Author</dt><dd><em>Luke Akema &amp; Dylan Shouldice-Jacobs</em> </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad735b927c63c190803e2b9af27e4c25d" name="ad735b927c63c190803e2b9af27e4c25d"></a>
@@ -250,6 +256,38 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>colour</b></td></tr
 
 </div>
 </div>
+<a id="aa32c5a06428a3cd2215a2106ceef8266" name="aa32c5a06428a3cd2215a2106ceef8266"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa32c5a06428a3cd2215a2106ceef8266">&#9670;&#160;</a></span>areAlmostEqual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Shape::areAlmostEqual </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>thisValue</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>otherValue</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Is used to check if two floating point numbers are almost equal. </p>
+<p><b>Details</b></p>
+<p>When an child object of shape wants to compare two floating point values to see if they are equal, this function will ignore the last couple decimals according to the tolerance set and return if the values are 'almost' equal or not.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>This const function returns if the two parameters are almost equal or not </dd></dl>
+
+</div>
+</div>
 <a id="a59abadfdb1fa58f8afb7c9fcc9ac1ede" name="a59abadfdb1fa58f8afb7c9fcc9ac1ede"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a59abadfdb1fa58f8afb7c9fcc9ac1ede">&#9670;&#160;</a></span>ChangeColour()</h2>
 
@@ -309,7 +347,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>colour</b></td></tr
 </div>
 </div>
 <a id="a88554b555eae9ec283a624ef0e8d8305" name="a88554b555eae9ec283a624ef0e8d8305"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88554b555eae9ec283a624ef0e8d8305">&#9670;&#160;</a></span>GetColour()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a88554b555eae9ec283a624ef0e8d8305">&#9670;&#160;</a></span>GetColour() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -333,6 +371,35 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>colour</b></td></tr
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>This method returns a copy of the colour value <br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="abb2339563a60f8c94e72f3fed923c875" name="abb2339563a60f8c94e72f3fed923c875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb2339563a60f8c94e72f3fed923c875">&#9670;&#160;</a></span>GetColour() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Shape::GetColour </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Is used to access the colour of a shape object. </p>
+<p><b>Details</b></p>
+<p>When an overloaded operator needs access to the colour of the shape this const method will return a copy of the colour and ensure the shape's data-member is unchanged</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">none</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>This const method returns a copy of the colour value <br  />
  </dd></dl>
 
 </div>

@@ -22,12 +22,14 @@ Inheritance diagram for Square\+:\begin{figure}[H]
 \begin{DoxyCompactList}\small\item\em To create a new instance of a square object when no parameters are present. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_square_ab99fbb5ea8ba88349120e2f4f9a18b8a}{Square}} (string new\+Colour, double new\+Side\+Length)
 \begin{DoxyCompactList}\small\item\em To create a new instance of a square object when all parameters are present(colour, sidelength) \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_square_a90af7ce1060cff7b717ceddb333846b8}{\texorpdfstring{$\sim$}{\string~}\+Square}} ()
+virtual \mbox{\hyperlink{class_square_a90af7ce1060cff7b717ceddb333846b8}{\texorpdfstring{$\sim$}{\string~}\+Square}} ()
 \begin{DoxyCompactList}\small\item\em Is called upon when a square object needs to be deleted, when it loses scope inside the program. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_square_accda78726f7986e834e13838bdc68435}{Get\+Side\+Length}} (void)
 \begin{DoxyCompactList}\small\item\em Is used when a part of the program needs access to this squares side\+Length it will return it to them. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_square_a52ab280f0bf6d510d41488a1e5d3e0df}{Change\+Side\+Length}} (double new\+Side\+Length)
 \begin{DoxyCompactList}\small\item\em Is used when a entity outside of this class wants to change this squares side\+Length. Ensures no invalid values are allowed. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_square_aad680efe2f3aa18daf1bbde8797728e0}{Get\+Side\+Length}} (void) const
+\begin{DoxyCompactList}\small\item\em Is used when a overloaded operator needs access to this squares side\+Length it will return it to them. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_square_a2a7e3a73cfbe9045d8a27dd8f738fda9}{Show}} (void)
 \begin{DoxyCompactList}\small\item\em Used to display all values related to the square object\+: name, colour, side\+Length. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_square_ae046b540c8544e422f628b662f1e86e3}{Perimeter}} (void)
@@ -35,7 +37,15 @@ virtual double \mbox{\hyperlink{class_square_ae046b540c8544e422f628b662f1e86e3}{
 virtual double \mbox{\hyperlink{class_square_a0b19881092536de79a7a2faa504a7449}{Area}} (void)
 \begin{DoxyCompactList}\small\item\em Calcultes the squares area. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_square_a1c5ae76ba87ed24e83fee990131abe5b}{Overall\+Dimension}} (void)
-\begin{DoxyCompactList}\small\item\em Returns the squares side\+Length. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the squares side\+Length. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_square_a28b81c4b28d3a66de45349f631de16fc}{operator==}} (const \mbox{\hyperlink{class_square}{Square}} \&op2) const
+\begin{DoxyCompactList}\small\item\em Overloaded equality operator for the square class. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_square}{Square}} \& \mbox{\hyperlink{class_square_a5b3d44eb29782413e4cf16bc39267951}{operator=}} (const \mbox{\hyperlink{class_square}{Square}} \&op2)
+\begin{DoxyCompactList}\small\item\em Overloaded assignment operator for the square class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_square}{Square}} \mbox{\hyperlink{class_square_a44f4c916effc730973eb43bb6e5b306c}{operator+}} (const \mbox{\hyperlink{class_square}{Square}} \&op2)
+\begin{DoxyCompactList}\small\item\em Overloaded addition operator for the square class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_square}{Square}} \mbox{\hyperlink{class_square_a4d10de13a1929e8b2361a6fdf8720973}{operator\texorpdfstring{$\ast$}{*}}} (const \mbox{\hyperlink{class_square}{Square}} \&op2)
+\begin{DoxyCompactList}\small\item\em Overloaded multiplication operator for the square class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_shape}{Shape}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -50,7 +60,11 @@ string \mbox{\hyperlink{class_shape_a7af8e23f8cce0f52e526b45b45818917}{Get\+Name
 bool \mbox{\hyperlink{class_shape_a59abadfdb1fa58f8afb7c9fcc9ac1ede}{Change\+Colour}} (string new\+Colour)
 \begin{DoxyCompactList}\small\item\em Is used to change the colour of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_shape_a0ff6cb644c5a6bd76cc665ebaaa491e1}{Change\+Name}} (string new\+Name)
-\begin{DoxyCompactList}\small\item\em Is used to change the name of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Is used to change the name of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_shape_abb2339563a60f8c94e72f3fed923c875}{Get\+Colour}} (void) const
+\begin{DoxyCompactList}\small\item\em Is used to access the colour of a shape object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_shape_aa32c5a06428a3cd2215a2106ceef8266}{are\+Almost\+Equal}} (double this\+Value, double other\+Value) const
+\begin{DoxyCompactList}\small\item\em Is used to check if two floating point numbers are almost equal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -147,7 +161,7 @@ Since this is a {\itshape constructor} of the square class, their is no return v
 \index{Square@{Square}!````~Square@{\texorpdfstring{$\sim$}{\string~}Square}}
 \index{````~Square@{\texorpdfstring{$\sim$}{\string~}Square}!Square@{Square}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Square()}{\string~Square()}}
-{\footnotesize\ttfamily Square\+::\texorpdfstring{$\sim$}{\string~}\+Square (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Square\+::\texorpdfstring{$\sim$}{\string~}\+Square (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -225,7 +239,7 @@ This method returns a boolean status code that signifies if the value was change
 \Hypertarget{class_square_accda78726f7986e834e13838bdc68435}\label{class_square_accda78726f7986e834e13838bdc68435} 
 \index{Square@{Square}!GetSideLength@{GetSideLength}}
 \index{GetSideLength@{GetSideLength}!Square@{Square}}
-\doxysubsubsection{\texorpdfstring{GetSideLength()}{GetSideLength()}}
+\doxysubsubsection{\texorpdfstring{GetSideLength()}{GetSideLength()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily double Square\+::\+Get\+Side\+Length (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
@@ -243,6 +257,118 @@ In the case that a entity foriegn to the circle class would like to view or use 
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 This method returns the value of the side\+Length of the square this was invoked on 
+\end{DoxyReturn}
+\Hypertarget{class_square_aad680efe2f3aa18daf1bbde8797728e0}\label{class_square_aad680efe2f3aa18daf1bbde8797728e0} 
+\index{Square@{Square}!GetSideLength@{GetSideLength}}
+\index{GetSideLength@{GetSideLength}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{GetSideLength()}{GetSideLength()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily double Square\+::\+Get\+Side\+Length (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Is used when a overloaded operator needs access to this squares side\+Length it will return it to them. 
+
+{\bfseries{Details}}
+
+In the case that a overloaded operator in the circle class would like to view or use the side\+Length of a square, this method gives them access
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This method returns the value of the side\+Length of the square this was invoked on 
+\end{DoxyReturn}
+\Hypertarget{class_square_a4d10de13a1929e8b2361a6fdf8720973}\label{class_square_a4d10de13a1929e8b2361a6fdf8720973} 
+\index{Square@{Square}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_square}{Square}} Square\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_square}{Square}} \&}]{op2 }\end{DoxyParamCaption})}
+
+
+
+Overloaded multiplication operator for the square class. 
+
+{\bfseries{Details}}
+
+Creates a new square object to hold the resultant square. The new sidelength is the product of the two \textquotesingle{}squares\textquotesingle{}s sidelengths. While the colour of the new square is set to the RHS squares\textquotesingle{}s colour.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & -\/ {\bfseries{const \doxylink{class_square}{Square}\&}} \+: The square object that is being multiplied with the LHS square, also passed as a constant by reference ensuring it is not changed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the new square object that is the product of lhs \texorpdfstring{$\ast$}{*} rhs. ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_square_a44f4c916effc730973eb43bb6e5b306c}\label{class_square_a44f4c916effc730973eb43bb6e5b306c} 
+\index{Square@{Square}!operator+@{operator+}}
+\index{operator+@{operator+}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_square}{Square}} Square\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_square}{Square}} \&}]{op2 }\end{DoxyParamCaption})}
+
+
+
+Overloaded addition operator for the square class. 
+
+{\bfseries{Details}}
+
+Creates a new square object to hold the resultant square. The new sidelength is the sum of the two square\textquotesingle{}s sidelengths. While the colour of the new square is set to the LHS square\textquotesingle{}s colour.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & -\/ {\bfseries{const \doxylink{class_square}{Square}\&}} \+: The square object that is being added to the LHS square, also passed as a constant reference ensuring it is not changed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the new square object that is the sum of lhs + rhs. ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_square_a5b3d44eb29782413e4cf16bc39267951}\label{class_square_a5b3d44eb29782413e4cf16bc39267951} 
+\index{Square@{Square}!operator=@{operator=}}
+\index{operator=@{operator=}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_square}{Square}} \& Square\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_square}{Square}} \&}]{op2 }\end{DoxyParamCaption})}
+
+
+
+Overloaded assignment operator for the square class. 
+
+{\bfseries{Details}}
+
+The square object that this operator was called upon (LHS) will gain the values of the RHS square. Which is the sidelength and the colour
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & -\/ {\bfseries{const \doxylink{class_square}{Square}\&}} \+: The square object that has the values to be put inside the LHS operand, also passed as a constant by reference ensuring it is not changed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the lhs square object that has been updated with the values of the rhs square object. 
+\end{DoxyReturn}
+\Hypertarget{class_square_a28b81c4b28d3a66de45349f631de16fc}\label{class_square_a28b81c4b28d3a66de45349f631de16fc} 
+\index{Square@{Square}!operator==@{operator==}}
+\index{operator==@{operator==}!Square@{Square}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Square\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_square}{Square}} \&}]{op2 }\end{DoxyParamCaption}) const}
+
+
+
+Overloaded equality operator for the square class. 
+
+{\bfseries{Details}}
+
+This will test the values of the LHS square object and the RHS square object to see if they are equal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & -\/ {\bfseries{const \doxylink{class_square}{Square}\&}} \+: The square object that has the values to be tested against the LHS values, also passed as a constant reference ensuring it is not changed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true or false depending on if the two squares are equal or not. 
 \end{DoxyReturn}
 \Hypertarget{class_square_a1c5ae76ba87ed24e83fee990131abe5b}\label{class_square_a1c5ae76ba87ed24e83fee990131abe5b} 
 \index{Square@{Square}!OverallDimension@{OverallDimension}}

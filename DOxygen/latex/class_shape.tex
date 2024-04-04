@@ -30,12 +30,16 @@ bool \mbox{\hyperlink{class_shape_a59abadfdb1fa58f8afb7c9fcc9ac1ede}{Change\+Col
 \begin{DoxyCompactList}\small\item\em Is used to change the colour of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_shape_a0ff6cb644c5a6bd76cc665ebaaa491e1}{Change\+Name}} (string new\+Name)
 \begin{DoxyCompactList}\small\item\em Is used to change the name of a \doxylink{class_shape}{Shape} object, safely. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_shape_abb2339563a60f8c94e72f3fed923c875}{Get\+Colour}} (void) const
+\begin{DoxyCompactList}\small\item\em Is used to access the colour of a shape object. \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_shape_a18c4ee2257909bf4f84ea4e4b09d575e}{Perimeter}} (void)=0
 \begin{DoxyCompactList}\small\item\em pure virutal method to be implemented in child-\/classes, to calculate the respective shapes permimeter \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_shape_a0fdf099ed5eefbc508a4660df0f690a0}{Area}} (void)=0
 \begin{DoxyCompactList}\small\item\em pure virutal method to be implemented in child-\/classes, to calculate the respective shapes area \end{DoxyCompactList}\item 
 virtual double \mbox{\hyperlink{class_shape_a75a0cb162699095d35fc86414f2d84fd}{Overall\+Dimension}} (void)=0
-\begin{DoxyCompactList}\small\item\em pure virutal method to be implemented in child-\/classes, to calculate the respective shapes trait dimension \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em pure virutal method to be implemented in child-\/classes, to calculate the respective shapes trait dimension \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_shape_aa32c5a06428a3cd2215a2106ceef8266}{are\+Almost\+Equal}} (double this\+Value, double other\+Value) const
+\begin{DoxyCompactList}\small\item\em Is used to check if two floating point numbers are almost equal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -66,7 +70,7 @@ The purpose of the \doxylink{class_shape}{Shape} class is to model a shape to it
 
 The shape class holds the general properties of any shape. The purpose of this shape class is to allow child classes to inherit from it, of which are acual specific shapes.~\newline
  The shape class is in charge of initialising the colour and name of the shape, and allow users to change and /or access the data members name and colour.~\newline
- The class also has 3 pure virtual functions so that child classes can use the concept of them. They must be overridden of course since the methods will change given different shapes.
+ The class also has 3 pure virtual functions so that child classes can use the concept of them. They must be overridden of course since the methods will change given different shapes. There is also a function for comparing two floats to check if they are almost equal, ignoring the last couple decimal points. This will be used in the child classes.
 
 \begin{DoxyAuthor}{Author}
 {\itshape Luke Akema \& Dylan Shouldice-\/\+Jacobs} 
@@ -139,6 +143,28 @@ pure virutal method to be implemented in child-\/classes, to calculate the respe
 
 Implemented in \mbox{\hyperlink{class_circle_a05a0dc93bb1ffad54760f4546d45e76f}{Circle}}, and \mbox{\hyperlink{class_square_a0b19881092536de79a7a2faa504a7449}{Square}}.
 
+\Hypertarget{class_shape_aa32c5a06428a3cd2215a2106ceef8266}\label{class_shape_aa32c5a06428a3cd2215a2106ceef8266} 
+\index{Shape@{Shape}!areAlmostEqual@{areAlmostEqual}}
+\index{areAlmostEqual@{areAlmostEqual}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{areAlmostEqual()}{areAlmostEqual()}}
+{\footnotesize\ttfamily int Shape\+::are\+Almost\+Equal (\begin{DoxyParamCaption}\item[{double}]{this\+Value,  }\item[{double}]{other\+Value }\end{DoxyParamCaption}) const}
+
+
+
+Is used to check if two floating point numbers are almost equal. 
+
+{\bfseries{Details}}
+
+When an child object of shape wants to compare two floating point values to see if they are equal, this function will ignore the last couple decimals according to the tolerance set and return if the values are \textquotesingle{}almost\textquotesingle{} equal or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This const function returns if the two parameters are almost equal or not 
+\end{DoxyReturn}
 \Hypertarget{class_shape_a59abadfdb1fa58f8afb7c9fcc9ac1ede}\label{class_shape_a59abadfdb1fa58f8afb7c9fcc9ac1ede} 
 \index{Shape@{Shape}!ChangeColour@{ChangeColour}}
 \index{ChangeColour@{ChangeColour}!Shape@{Shape}}
@@ -188,7 +214,7 @@ This method returns a boolean status code that signifies if the value was change
 \Hypertarget{class_shape_a88554b555eae9ec283a624ef0e8d8305}\label{class_shape_a88554b555eae9ec283a624ef0e8d8305} 
 \index{Shape@{Shape}!GetColour@{GetColour}}
 \index{GetColour@{GetColour}!Shape@{Shape}}
-\doxysubsubsection{\texorpdfstring{GetColour()}{GetColour()}}
+\doxysubsubsection{\texorpdfstring{GetColour()}{GetColour()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily string Shape\+::\+Get\+Colour (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
@@ -206,6 +232,29 @@ When an entity needs access to the colour of the shape this method will return a
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 This method returns a copy of the colour value ~\newline
+ 
+\end{DoxyReturn}
+\Hypertarget{class_shape_abb2339563a60f8c94e72f3fed923c875}\label{class_shape_abb2339563a60f8c94e72f3fed923c875} 
+\index{Shape@{Shape}!GetColour@{GetColour}}
+\index{GetColour@{GetColour}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{GetColour()}{GetColour()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string Shape\+::\+Get\+Colour (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Is used to access the colour of a shape object. 
+
+{\bfseries{Details}}
+
+When an overloaded operator needs access to the colour of the shape this const method will return a copy of the colour and ensure the shape\textquotesingle{}s data-\/member is unchanged
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This const method returns a copy of the colour value ~\newline
  
 \end{DoxyReturn}
 \Hypertarget{class_shape_a7af8e23f8cce0f52e526b45b45818917}\label{class_shape_a7af8e23f8cce0f52e526b45b45818917} 

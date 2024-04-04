@@ -7,44 +7,51 @@
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ MAX\_COLOUR\_LENGTH\ 10}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ NAME\_SIZE\ 51}}
 \DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }std;}
-\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ EQUAL\ 1}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ NOT\_EQUAL\ 0}}
 \DoxyCodeLine{00009\ }
-\DoxyCodeLine{00011\ \ \textcolor{comment}{//\ This\ below\ puts\ in\ a\ picture\ a\ square.\ The\ '\(\backslash\)n'\ stops\ the\ text\ wrapping\ }}
-\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_shape}{Shape}}}
-\DoxyCodeLine{00024\ \{}
-\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ ATTRIBUTES\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_afef5e9426226fd7af49fe48ec16b97f3}{name}};\ \ \ \ }
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_a525db72bc0e96e0daa2c1bd0ce8cb076}{colour}};\ \ }
-\DoxyCodeLine{00029\ \ \ \ \ }
-\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ METHOD\ PROTOTYPES\ -\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_shape_a2c81e227edd2803a084c65c75e4ffd5b}{Shape}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_afef5e9426226fd7af49fe48ec16b97f3}{name}},\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_a525db72bc0e96e0daa2c1bd0ce8cb076}{colour}});\ \ \ \ \textcolor{comment}{//\ Constructor:\ The\ given\ name\ must\ be\ circle,\ square,\ or\ unknown\ and\ less\ than\ 50\ characters,\ or\ else\ name\ set\ to\ unknown.}}
-\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_shape_a2c81e227edd2803a084c65c75e4ffd5b}{Shape}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ default\ constructor\ will\ make\ the\ name\ Unknown,\ and\ the\ colour\ undefined.\ }}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \ \textcolor{comment}{//\ This\ below\ puts\ in\ a\ picture\ a\ square.\ The\ '\(\backslash\)n'\ stops\ the\ text\ wrapping\ }}
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_shape}{Shape}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ ATTRIBUTES\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_afef5e9426226fd7af49fe48ec16b97f3}{name}};\ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_a525db72bc0e96e0daa2c1bd0ce8cb076}{colour}};\ \ }
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_a88554b555eae9ec283a624ef0e8d8305}{GetColour}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ returns\ copy\ of\ the\ data\ member\ colour}}
-\DoxyCodeLine{00038\ \ \ \ \ }
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_a7af8e23f8cce0f52e526b45b45818917}{GetName}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ returns\ copy\ of\ the\ data\ member\ name}}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_shape_a59abadfdb1fa58f8afb7c9fcc9ac1ede}{ChangeColour}}(\textcolor{keywordtype}{string}\ newColour);\ \ \textcolor{comment}{//\ validates\ then\ changes\ the\ data\ member\ colour}}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_shape_a0ff6cb644c5a6bd76cc665ebaaa491e1}{ChangeName}}(\textcolor{keywordtype}{string}\ newName);\ \ \ \ \ \ \textcolor{comment}{//\ validates\ then\ changes\ the\ data\ member\ name}}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ PURE\ VIRTUAL\ FUNCTION\ PROTOTYPES\ -\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_shape_a18c4ee2257909bf4f84ea4e4b09d575e}{Perimeter}}(\textcolor{keywordtype}{void})\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//calculates\ perimeter}}
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_shape_a0fdf099ed5eefbc508a4660df0f690a0}{Area}}(\textcolor{keywordtype}{void})\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//calculates\ area}}
-\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_shape_a75a0cb162699095d35fc86414f2d84fd}{OverallDimension}}(\textcolor{keywordtype}{void})\ =\ 0;\ \ \ \textcolor{comment}{//calculates\ overalldimension}}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Function\ Prototype-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
-\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ METHOD\ PROTOTYPES\ -\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_shape_a2c81e227edd2803a084c65c75e4ffd5b}{Shape}}(\textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_afef5e9426226fd7af49fe48ec16b97f3}{name}},\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_a525db72bc0e96e0daa2c1bd0ce8cb076}{colour}});\ \ \ \ \textcolor{comment}{//\ Constructor:\ The\ given\ name\ must\ be\ circle,\ square,\ or\ unknown\ and\ less\ than\ 50\ characters,\ or\ else\ name\ set\ to\ unknown.}}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_shape_a2c81e227edd2803a084c65c75e4ffd5b}{Shape}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ default\ constructor\ will\ make\ the\ name\ Unknown,\ and\ the\ colour\ undefined.\ }}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_a88554b555eae9ec283a624ef0e8d8305}{GetColour}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ returns\ copy\ of\ the\ data\ member\ colour}}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_a7af8e23f8cce0f52e526b45b45818917}{GetName}}(\textcolor{keywordtype}{void});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ returns\ copy\ of\ the\ data\ member\ name}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_shape_a59abadfdb1fa58f8afb7c9fcc9ac1ede}{ChangeColour}}(\textcolor{keywordtype}{string}\ newColour);\ \ \textcolor{comment}{//\ validates\ then\ changes\ the\ data\ member\ colour}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_shape_a0ff6cb644c5a6bd76cc665ebaaa491e1}{ChangeName}}(\textcolor{keywordtype}{string}\ newName);\ \ \ \ \ \ \textcolor{comment}{//\ validates\ then\ changes\ the\ data\ member\ name}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_shape_a88554b555eae9ec283a624ef0e8d8305}{GetColour}}(\textcolor{keywordtype}{void})\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ "{}const"{}\ accessor\ for\ the\ colour\ attribute\ of\ the\ shape}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ PURE\ VIRTUAL\ FUNCTION\ PROTOTYPES\ -\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
 \DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \};}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_shape_a18c4ee2257909bf4f84ea4e4b09d575e}{Perimeter}}(\textcolor{keywordtype}{void})\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//calculates\ perimeter}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_shape_a0fdf099ed5eefbc508a4660df0f690a0}{Area}}(\textcolor{keywordtype}{void})\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//calculates\ area}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_shape_a75a0cb162699095d35fc86414f2d84fd}{OverallDimension}}(\textcolor{keywordtype}{void})\ =\ 0;\ \ \ \textcolor{comment}{//calculates\ overalldimension}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/Function\ Prototype-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00065\ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_shape_aa32c5a06428a3cd2215a2106ceef8266}{areAlmostEqual}}(\textcolor{keywordtype}{double}\ thisValue,\ \textcolor{keywordtype}{double}\ otherValue)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ checks\ if\ two\ doubles\ are\ almost\ equal}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \};}
 
 \end{DoxyCode}
