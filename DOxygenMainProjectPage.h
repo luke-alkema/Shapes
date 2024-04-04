@@ -31,7 +31,7 @@
 /// Not all shapes have sides (e.g. circle), so this is a special attribute just for square. 
 ///
 /// \section GitHub
-/// - <A target=blank HREF="https://github.com/LukeleLegend/A-04/"> GitHub Repository A-04</A>
+/// - <A target=blank HREF="https://github.com/LukeleLegend/Shapes/"> GitHub Repository A-04</A>
 /// \section Requirements
 /// <hr>
 /// <blockquote>
