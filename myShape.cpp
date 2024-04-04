@@ -11,8 +11,6 @@
 #include "Circle.h"
 #include "Square.h"
 
-#define ERROR -1
-
 
 int main(void)
 {
