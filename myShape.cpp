@@ -1,9 +1,10 @@
 /* 
 	NAME	:	myShape.cpp
+
 	PURPOSE :	This program runs through the uses of the Shapes class, 
 				as well as the Shape's children Circle and Square. We dynamiclly instantiate a square and a circle,
-				the values for the Shape's come from the user, colour, radius, side length. We then display the Shape's 
-				area, perimeter, radius / side length in centimeters. Then we delete the objects so that the memory man can enjoy his lonesome days.
+				the values for the Shape's come from the pre-defined set of values given in the requirements, colour, radius, side length. We then display the Shape's 
+				area, perimeter, radius / side length in centimeters. We then test the overloaded operators +, *, =, ==. Printing the values that are returned after each operation.
 
 */
 
@@ -19,39 +20,43 @@ int main(void)
 	char colourBuffer[MAX_USER_INPUT] = "";
 	char dimensionBuffer[MAX_USER_INPUT] = "";
 
-	printf("\n----Creating a Square----\n");
-
-	printf("Enter Squares Colour >> ");
-	fgets(colourBuffer, MAX_USER_INPUT, stdin);
-	colourBuffer[strcspn(colourBuffer, "\n")] = 0;
-
-	char sideLengthBuffer[MAX_USER_INPUT] = "";
-	printf("Enter Squares Side Length >> ");
-	fgets(dimensionBuffer, MAX_USER_INPUT, stdin);
-	double sideLength = atof(dimensionBuffer);
-
-	Square* mySquare = new Square(colourBuffer, sideLength);
-	if (mySquare == NULL)
-	{
-		printf("Not enought memory\n");
-		return ERROR;
-	}
-	mySquare->Show();
-
+	Square square1("orange", 5);
+	Square square2("purple", 12);
+	Square playASquare;
 	
-	printf("\n----Creating a Circle----\n");
+	// Show intial values
 
-	printf("Input Circle's colour >> ");
-	fgets(colourBuffer, MAX_USER_INPUT, stdin);
-	colourBuffer[strcspn(colourBuffer, "\n")] = 0;
+	round1.Show();
+	round2.Show();
+	playARound.Show();
+	square1.Show();
+	square2.Show();
+	playASquare.Show();
 
-	printf("Input Circle's radius >> ");
-	fgets(dimensionBuffer, MAX_USER_INPUT, stdin);
-	dimensionBuffer[strcspn(dimensionBuffer, "\n")] = 0;
-	double radius = atof(dimensionBuffer);
+	// Test addition operator
 
-	Circle* myCircle = new Circle(colourBuffer, radius);
-  if (myCircle == NULL)
+	playARound = round1 + round2;
+	playASquare = square2 + square1;
+	playARound.Show();
+	playASquare.Show();
+
+	// Test multiplication operator
+
+	playARound = round1 * round2;
+	playASquare = square2 * square1;
+	playARound.Show();
+	playASquare.Show();
+
+	// Test assignment operator
+	playARound = round1;
+
+
+	// Test equality operator
+	if (playARound == round1)
+	{
+		printf("Hurray !!\n");
+	}
+	else
 	{
 		printf("Not enough memory\n");
 		return ERROR;

@@ -182,6 +182,37 @@ double Circle::OverallDimension(void)
 	return radius * 2;
 }
 
+
+/// \brief Overloaded addition operator for the circle class
+/// \details <b>Details</b> 
+/// 
+///  <summary>  Creates a new circle object to hold the resultant circle. New radius is the sum of the two circle radii.
+///				While the colour of the new circle is set to the LHS circle's colour.
+/// </summary>
+/// 
+///  \param     rhs - <b>const Circle&</b> : The circle object that is being added to the LHS circle, also passed as a constant by reference ensuring it is not changed.
+/// 
+/// \return returns the new circle object that is the sum of lhs + rhs. 
+Circle Circle::operator+(const Circle& rhs)
+{
+	Circle temp;
+
+	temp.radius = this->radius + rhs.GetRadius();
+	temp.ChangeColour(this->GetColour());
+
+	return temp;
+}
+
+Circle Circle::operator*(const Circle& rhs)
+{
+	Circle temp;
+
+	temp.radius = this->radius * rhs.GetRadius();
+	temp.ChangeColour(rhs.GetColour());
+
+	return temp;
+}
+
 const Circle& Circle::operator=(const Circle& rhs)
 {
 	this->radius = rhs.radius;
