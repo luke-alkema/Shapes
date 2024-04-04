@@ -183,7 +183,15 @@ double Square::OverallDimension(void)
 }
 
 
-
+/// \brief Overloaded equality operator for the square class
+/// \details <b>Details</b> 
+/// 
+///  <summary>  This will test the values of the LHS square object and the RHS square object to see if they are equal. 
+/// </summary>
+/// 
+///  \param     rhs - <b>const Square&</b> : The square object that has the values to be tested against the LHS values, also passed as a constant reference ensuring it is not changed.
+/// 
+/// \return returns true or false depending on if the two squares are equal or not.
 bool Square::operator==(const Square& op2) const
 {
 	//  Checks if the colours are equal using == which will result in 1 or 0, then calls upon the areAlmostEqual to check if sidelengths are equal properly.
@@ -191,6 +199,16 @@ bool Square::operator==(const Square& op2) const
 	return (this->GetColour() == op2.GetColour()) && areAlmostEqual(this->GetSideLength(), op2.GetSideLength());
 }
 
+
+/// \brief Overloaded assignment operator for the square class
+/// \details <b>Details</b> 
+/// 
+///  <summary>  The square object that this operator was called upon (LHS) will gain the values of the RHS square. Which is the sidelength and the colour
+/// </summary>
+/// 
+///  \param     rhs - <b>const Square&</b> : The square object that has the values to be put inside the LHS operand, also passed as a constant by reference ensuring it is not changed.
+/// 
+/// \return returns the lhs square object that has been updated with the values of the rhs square object.
 const Square& Square::operator=(const Square& op2)
 {
 	this->ChangeSideLength(op2.GetSideLength());
@@ -198,6 +216,17 @@ const Square& Square::operator=(const Square& op2)
 	return *this;
 }
 
+
+/// \brief Overloaded addition operator for the square class
+/// \details <b>Details</b> 
+/// 
+///  <summary>  Creates a new square object to hold the resultant square. The new sidelength is the sum of the two square's sidelengths.
+///				While the colour of the new square is set to the LHS square's colour.
+/// </summary>
+/// 
+///  \param     rhs - <b>const Square&</b> : The square object that is being added to the LHS square, also passed as a constant reference ensuring it is not changed.
+/// 
+/// \return returns the new square object that is the sum of lhs + rhs. 
 Square Square::operator+(const Square& op2)
 {
 	Square temp;
@@ -206,6 +235,17 @@ Square Square::operator+(const Square& op2)
 	return temp;
 }
 
+
+/// \brief Overloaded multiplication operator for the square class
+/// \details <b>Details</b> 
+/// 
+///  <summary>  Creates a new square object to hold the resultant square. The new sidelength is the product of the two 'squares's sidelengths.
+///				While the colour of the new square is set to the RHS squares's colour.
+/// </summary>
+/// 
+///  \param     rhs - <b>const Square&</b> : The square object that is being multiplied with the LHS square, also passed as a constant by reference ensuring it is not changed.
+/// 
+/// \return returns the new square object that is the product of lhs * rhs. 
 Square Square::operator*(const Square& op2)
 {
 	Square temp;
