@@ -166,8 +166,8 @@ string Shape::GetColour(void) const
 ///				last couple decimals according to the tolerance set and return if the values are 'almost' equal or not. 
 /// </summary>
 /// 
-/// \param none
-/// 
+/// \param thisValue - <b>double</b> : Takes the left hand operand 
+/// \param otherValue - <b>double</b> : Takes the right hand operand
 /// \return This const function returns if the two parameters are almost equal or not
 int Shape::areAlmostEqual(double thisValue, double otherValue) const
 {

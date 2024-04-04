@@ -19,8 +19,8 @@
 /// \section Circle
 /// The <b>Circle</b> class inherits from the shape class. This means that <i>Circle</i> must implement the 3 pure virtual functions from <i>Shape</i> including:
 /// Perimeter(), Area(), and OverallDimension(). These functions change with each different shape, as formulas for these calculations arn't all the same. 
-/// The <i>Square<i> class has data-members like name and colour, the generic attributes from <i>Shape</i>.
-/// Where the <i>Circle</i> class starts to change from the <i>Shape</i> class is that it also has a double radius attribute, for the radius of the circle. 
+/// The <i>Circle</i> class has data-members like name and colour, the generic attributes from <i>Shape</i>.
+/// Where the <i>Circle</i> class starts to change from the <i>Circle</i> class is that it also has a double radius attribute, for the radius of the circle. 
 /// As well as holds the definition of PI for use in operations. We added some overloaded operators to add, multiply, assign, and check if the circles are equal. 
 /// 
 /// \section Square
@@ -42,7 +42,7 @@
 /// \section version Current version of the Dog Project :
 /// <ul>
 /// <li>\authors   The <b><i>Luke Alkema & Dylan Shouldice-Jacobs</i></b> Team !!</li>
-/// <li>\version   1.0.1.0.1.0.A</li>
+/// <li>\version   1.0.1.0.1.0.B</li>
 /// <li>\date      2024-2024</li>
 /// <li>\copyright Shape-Expert Team</li>
 /// </ul>
