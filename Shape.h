@@ -20,7 +20,8 @@ using namespace std;
 /// <summary> The shape class holds the general properties of any shape. The purpose of this shape class is to allow child classes to inherit from it, 
 ///           of which are acual specific shapes.<br> The shape class is in charge of initialising the colour and name of the shape, and allow users to change
 ///           and /or access the data members name and colour.<br> The class also has 3 pure virtual functions so that child classes can use the concept of them.
-///           They must be overridden of course since the methods will change given different shapes.
+///           They must be overridden of course since the methods will change given different shapes. There is also a function for comparing two floats to check 
+///			  if they are almost equal, ignoring the last couple decimal points. This will be used in the child classes. 
 /// </summary>
 /// 
 /// \author <i>Luke Akema & Dylan Shouldice-Jacobs</i>
@@ -46,10 +47,10 @@ public:
 
 	bool ChangeName(string newName);      // validates then changes the data member name
 
-	// "const" accessors for the colour attribute of the shape
-	string GetColour(void) const;
+	
+	string GetColour(void) const; // "const" accessor for the colour attribute of the shape
 
-	int areAlmostEqual(double thisValue, double otherValue) const; // checks if two doubles are almost equal
+	
 
 	/* ---------- PURE VIRTUAL FUNCTION PROTOTYPES --------- */
 
@@ -62,5 +63,6 @@ public:
 
 	/*-------------Function Prototype----------*/
 	
+	int areAlmostEqual(double thisValue, double otherValue) const; // checks if two doubles are almost equal
 
 };

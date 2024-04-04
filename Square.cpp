@@ -182,11 +182,13 @@ double Square::OverallDimension(void)
 	return sideLength;
 }
 
+
+
 bool Square::operator==(const Square& op2) const
 {
 	//  Checks if the colours are equal using == which will result in 1 or 0, then calls upon the areAlmostEqual to check if sidelengths are equal properly.
 	//  Also resulting in a 1 if equal, or a 0 if not
-	return (this->GetColour() == op2.GetColour()) && areAlmostEqual(this->sideLength, op2.sideLength); 
+	return (this->GetColour() == op2.GetColour()) && areAlmostEqual(this->GetSideLength(), op2.GetSideLength());
 }
 
 const Square& Square::operator=(const Square& op2)

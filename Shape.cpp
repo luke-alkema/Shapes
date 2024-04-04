@@ -143,11 +143,32 @@ bool Shape::ChangeName(string newName)
 	return retCode;
 }
 
+
+/// \brief Is used to access the colour of a shape object
+/// \details <b>Details</b> 
+/// 
+///  <summary>  When an overloaded operator needs access to the colour of the shape this const method will return a copy of the colour and ensure the shape's data-member is unchanged
+/// </summary>
+/// 
+/// \param none
+/// 
+/// \return This const method returns a copy of the colour value 
 string Shape::GetColour(void) const
 {
 	return colour;
 }
 
+
+/// \brief Is used to check if two floating point numbers are almost equal
+/// \details <b>Details</b> 
+/// 
+///  <summary>  When an child object of shape wants to compare two floating point values to see if they are equal, this function will ignore the
+///				last couple decimals according to the tolerance set and return if the values are 'almost' equal or not. 
+/// </summary>
+/// 
+/// \param none
+/// 
+/// \return This const function returns if the two parameters are almost equal or not
 int Shape::areAlmostEqual(double thisValue, double otherValue) const
 {
 	double tolerance = 0.0001; // If the difference is less than 0.0001, the two values are considered equal
