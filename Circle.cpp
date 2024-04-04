@@ -40,7 +40,7 @@ Circle::Circle(string newColour, double newRadius) : Shape("Circle", newColour)
 /// \return Since this is a <i>constructor</i> of the circle class, their is no return value
 /// \see ~Circle()
 /// \see Shape()
-Circle::Circle(void) : Shape()
+Circle::Circle(void) : Shape("Circle", "undefined")
 {
 	radius = MIN_RADIUS; 
 }
@@ -59,7 +59,7 @@ Circle::Circle(void) : Shape()
 /// \see Circle()
 Circle::~Circle(void)
 {
-	printf("The circle is broken  ...\n");
+	printf("\nThe circle is broken  ...\n");
 }
 
 
@@ -215,7 +215,7 @@ Circle Circle::operator*(const Circle& rhs)
 
 const Circle& Circle::operator=(const Circle& rhs)
 {
-	this->radius = rhs.radius;
+	this->radius = rhs.GetRadius();
 	this->ChangeColour(rhs.GetColour());
 
 	return *this;
