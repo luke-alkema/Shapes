@@ -182,6 +182,17 @@ double Circle::OverallDimension(void)
 	return radius * 2;
 }
 
+
+/// \brief Overloaded addition operator for the circle class
+/// \details <b>Details</b> 
+/// 
+///  <summary>  Creates a new circle object to hold the resultant circle. New radius is the sum of the two circle's radii.
+///				While the colour of the new circle is set to the LHS circle's colour.
+/// </summary>
+/// 
+///  \param     rhs - <b>const Circle&</b> : The circle object that is being added to the LHS circle, also passed as a constant by reference ensuring it is not changed.
+/// 
+/// \return returns the new circle object that is the sum of lhs + rhs. 
 Circle Circle::operator+(const Circle& rhs)
 {
 	Circle temp;
@@ -192,6 +203,17 @@ Circle Circle::operator+(const Circle& rhs)
 	return temp;
 }
 
+
+/// \brief Overloaded multiplication operator for the circle class
+/// \details <b>Details</b> 
+/// 
+///  <summary>  Creates a new circle object to hold the resultant circle. New radius is the product of the two 'circle's radii.
+///				While the colour of the new circle is set to the RHS circle's colour.
+/// </summary>
+/// 
+///  \param     rhs - <b>const Circle&</b> : The circle object that is being multiplied with the LHS circle, also passed as a constant by reference ensuring it is not changed.
+/// 
+/// \return returns the new circle object that is the product of lhs * rhs. 
 Circle Circle::operator*(const Circle& rhs)
 {
 	Circle temp;
@@ -202,6 +224,16 @@ Circle Circle::operator*(const Circle& rhs)
 	return temp;
 }
 
+
+/// \brief Overloaded assignment operator for the circle class
+/// \details <b>Details</b> 
+/// 
+///  <summary>  The circle object that this operator was called upon (LHS) will gain the values of the RHS circle. Which is the radius and the colour
+/// </summary>
+/// 
+///  \param     rhs - <b>const Circle&</b> : The circle object that has the values to be put inside the LHS operand, also passed as a constant by reference ensuring it is not changed.
+/// 
+/// \return returns the lhs circle object that has been updated with the values of the rhs circle object.
 const Circle& Circle::operator=(const Circle& rhs)
 {
 	this->radius = rhs.GetRadius();
@@ -210,6 +242,16 @@ const Circle& Circle::operator=(const Circle& rhs)
 	return *this;
 }
 
+
+/// \brief Overloaded equality operator for the circle class
+/// \details <b>Details</b> 
+/// 
+///  <summary>  This will test the values of the LHS circle object and the RHS circle object to see if they are equal. 
+/// </summary>
+/// 
+///  \param     rhs - <b>const Circle&</b> : The circle object that has the values to be tested against the LHS values, also passed as a constant by reference ensuring it is not changed.
+/// 
+/// \return returns true or false depending on if the two circles are equal or not.
 bool Circle::operator==(const Circle& rhs) const
 {
 	//  Checks if the colours are equal using == which will result in 1 or 0, then calls upon the areAlmostEqual to check if radius are equal properly.

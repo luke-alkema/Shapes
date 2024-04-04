@@ -1,16 +1,15 @@
 /* 
 	NAME	:	myShape.cpp
+
 	PURPOSE :	This program runs through the uses of the Shapes class, 
 				as well as the Shape's children Circle and Square. We dynamiclly instantiate a square and a circle,
-				the values for the Shape's come from the user, colour, radius, side length. We then display the Shape's 
-				area, perimeter, radius / side length in centimeters. Then we delete the objects so that the memory man can enjoy his lonesome days.
+				the values for the Shape's come from the pre-defined set of values given in the requirements, colour, radius, side length. We then display the Shape's 
+				area, perimeter, radius / side length in centimeters. We then test the overloaded operators +, *, =, ==. Printing the values that are returned after each operation.
 
 */
 
 #include "Circle.h"
 #include "Square.h"
-
-#define ERROR -1
 
 
 int main(void)
